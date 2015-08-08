@@ -203,6 +203,7 @@
     <Content Include="images\american_national_redcross.jpg" />
     <Content Include="images\feeding-america.jpg" />
     <Content Include="images\goodwill-industries.jpg" />
+    <Content Include="images\logo.png" />
     <Content Include="images\salvation-army.jpg" />
     <Content Include="images\task-force-for-global-health.jpg" />
     <Content Include="images\united-way.jpg" />
@@ -452,7 +453,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61453</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
