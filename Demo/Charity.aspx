@@ -6,18 +6,18 @@
         <div class="thumbnail" id="JP">
                     <div class="col-md-12">
 
-                        <asp:Label ID="CharityNameLabel" runat="server" Text="Label" Font-Bold Font-Size ="30"   ></asp:Label>
+                        <asp:Label ID="CharityNameLabel" runat="server" Text="Label" CssClass="NameLabel"   ></asp:Label>
                             
-                        <div align="center">
+                        <div style="text-align: left;">
                             <img src ="/images/believe.png" alt ="There should be an image here" />
                         </div>
 
-                        <div align="right">
-                            <label
-                            <asp:Label ID="TotalRaisedLabel" runat="server" Text="Label" Font-Bold Font-Size="25"></asp:Label>
+                        <div >
+                            
+<%--                            <asp:Label ID="TotalRaisedLabel" runat="server" Text="Label" Font-Bold Font-Size="25"></asp:Label>--%>
                         </div>
-                        <div align ="center">
-                            <asp:Label ID="DescriptionLabel" runat="server" Text="Label"></asp:Label>
+                        <div >
+                            <asp:Label ID="DescriptionLabel" runat="server" CssClass="DescLabel"></asp:Label>
                         </div>
                     </div>
                 </div>
