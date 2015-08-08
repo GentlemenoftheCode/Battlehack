@@ -11,17 +11,18 @@
             <div class="row">
                 <div class="col-md-3 box">
                     <h4>Please choose one.</h4>
-                    <asp:DropDownList runat="server" ID="queryDDL">
-                        <asp:ListItem>Option 1</asp:ListItem>
-                        <asp:ListItem>Option 2</asp:ListItem>
-                        <asp:ListItem>Option 3</asp:ListItem>
-                        <asp:ListItem>Option 4</asp:ListItem>
+                    <asp:DropDownList runat="server" ID="queryDDL" AutoPostBack="true" OnSelectedIndexChanged="queryDDL_SelectedIndexChanged">
+                        <asp:ListItem>Pull.</asp:ListItem>
+                        <asp:ListItem>Suck.</asp:ListItem>
+                        <asp:ListItem>Nigger.</asp:ListItem>
+                        <asp:ListItem>I'm.</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <div class="col-md-3 col-md-offset-1 box">
 
 
                     <asp:Label ID="Label1" runat="server" CssClass="label label-default"></asp:Label>
+                    <asp:Label ID="patLabel1" runat="server"></asp:Label>
 
 
                 </div>
@@ -30,7 +31,6 @@
             <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" Text="Pls." OnClick="Button2_Click" />
 
 
-                    <asp:Label ID="patLabel1" runat="server"></asp:Label>
                 </div>
             </div>
         </ContentTemplate>

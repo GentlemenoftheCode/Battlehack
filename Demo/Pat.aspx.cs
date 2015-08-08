@@ -16,7 +16,12 @@ namespace Demo
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            patLabel1.Text = "Lick my butthole.";
+            Label1.Text = "Lick my butthole.";
+        }
+
+        protected void queryDDL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            patLabel1.Text = queryDDL.SelectedItem.Text;
         }
     }
 }
