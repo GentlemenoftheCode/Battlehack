@@ -7,7 +7,9 @@
             <img class="img-responsive" src="http://placehold.it/800x300" alt="">
             <div class="caption-full">
                 <h4 class="pull-right">$24.99</h4>
-                <h4><a href="#">Product Name</a>
+                <h4><a href="#">
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    </a>
                 </h4>
                 <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                 <p>
@@ -32,22 +34,15 @@
 
         <div class="well" id="Roshin">
 
-            <div class="text-right">
-                <a class="btn btn-success">Leave a Review</a>
-            </div>
-
             <hr>
 
             <div class="row">
                 <div class="col-md-12">
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    Anonymous
-                            <span class="pull-right">10 days ago</span>
-                    <p>This product was great in terms of quality. I would definitely buy another!</p>
+                    <span class="pull-right"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Ends <asp:Label ID="Endtime" runat="server" Text="Soon"></asp:Label> </span>
+                    <p class="lead">
+                        <asp:Label ID="raffleTitle" runat="server" Text="Title"></asp:Label></p>
+                    <p>
+                        <asp:Label ID="raffleShortDis" runat="server" Text="About Raffle"></asp:Label></p>
                 </div>
             </div>
 
