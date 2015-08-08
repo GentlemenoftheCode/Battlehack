@@ -12,10 +12,10 @@
                 <div class="col-md-3 box">
                     <h4>Please choose one.</h4>
                     <asp:DropDownList runat="server" ID="queryDDL" AutoPostBack="true" OnSelectedIndexChanged="queryDDL_SelectedIndexChanged">
-                        <asp:ListItem>Pull.</asp:ListItem>
-                        <asp:ListItem>Suck.</asp:ListItem>
-                        <asp:ListItem>Nigger.</asp:ListItem>
-                        <asp:ListItem>I'm.</asp:ListItem>
+                        <asp:ListItem>Pls.</asp:ListItem>
+                        <asp:ListItem>Nop.</asp:ListItem>
+                        <asp:ListItem>Yes</asp:ListItem>
+                        <asp:ListItem>No</asp:ListItem>
                     </asp:DropDownList>
                 </div>
                 <div class="col-md-3 col-md-offset-1 box">
