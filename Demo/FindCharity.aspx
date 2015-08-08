@@ -49,7 +49,7 @@
             );
             $('#example tbody').on('click', 'button', function () {
                 var data = table.row($(this).parents('tr')).data();
-                alert(data.Name + "'s id is: " + data.CharityID);
+                alert(data[0] + "'s id is: ");
             });
 
             //$('#example tbody').on('click', 'button', function () {

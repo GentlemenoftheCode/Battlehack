@@ -4,7 +4,7 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
 
-    <div class="col-xs-12" id="HomePage">
+    <div class="col-xs-12 page">
         <div class="row">
             <div class="jumbotron" style="text-align: center">
                 <h3>Join a Charity Raffle Online</h3>
