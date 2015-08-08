@@ -242,6 +242,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="images\american_national_redcross.jpg" />
     <Content Include="images\believe.png" />
+    <Content Include="images\carousel_large.jpg" />
     <Content Include="images\feeding-america.jpg" />
     <Content Include="images\goodwill-industries.jpg" />
     <Content Include="images\logo.png" />
