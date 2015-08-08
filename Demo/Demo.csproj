@@ -200,6 +200,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="images\american_national_redcross.jpg" />
+    <Content Include="images\feeding-america.jpg" />
+    <Content Include="images\goodwill-industries.jpg" />
+    <Content Include="images\salvation-army.jpg" />
+    <Content Include="images\task-force-for-global-health.jpg" />
+    <Content Include="images\united-way.jpg" />
     <Content Include="Roshin.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
