@@ -112,7 +112,8 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <!-- <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p> -->
+                <p>Built by David Skoda, Roshin Cherian, James Hall, and Patrick Mulvihill for BattleHack NYC 2015.</p>
             </footer>
         </div>
     </form>
