@@ -13,5 +13,10 @@ namespace Demo
         {
 
         }
+
+        protected void MenuDDL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
