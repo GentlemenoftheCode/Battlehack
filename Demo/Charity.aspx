@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="col-md-12">
 
-        <div class="thumbnail" id="JP">
+        
             <div class="col-md-6">
                 <div style="text-align: left;">
                     <p>
@@ -21,5 +21,5 @@
         </div>
 
       
-    </div>
+   
 </asp:Content>

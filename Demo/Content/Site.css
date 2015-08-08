@@ -78,7 +78,7 @@ input[type="select"] {
 .NameLabel{
 
     font-weight: bold;
-    font-size: 30;
+    font-size: 200%;
 
 }
 
@@ -90,7 +90,7 @@ input[type="select"] {
 
 .RaisedLabel{
     font-weight: bold;
-    font-size: 25;
+    font-size: 150%;
 
 }
 
