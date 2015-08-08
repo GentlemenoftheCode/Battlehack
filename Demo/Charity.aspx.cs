@@ -18,6 +18,7 @@ namespace Demo
             String imgURL = "http://images.nymag.com/images/urban/03/holidayguide/charityguide/charity031117_2_125.jpg";
             CharityNameLabel.Text = Name;
             TotalRaisedLabel.Text = TotalRaised;
+            DescriptionLabel.Text = about;
         }
     }
 }

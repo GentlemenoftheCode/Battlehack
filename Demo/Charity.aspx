@@ -4,30 +4,21 @@
      <div class="col-md-12">
 
         <div class="thumbnail" id="JP">
-                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
-                    <div class="caption-full">
-                        
-                        <asp:Label ID="TotalRaisedLabel" runat="server" Text="Label"></asp:Label>
-                        <asp:Label ID="CharityNameLabel" runat="server" Text="Label"></asp:Label>
-                        
-                        <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                <p>
-                    Want to make these reviews work? Check out
-                            <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this building a review system tutorial</a>
-                            </strong>over at maxoffsky.com!
-                </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">3 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            4.0 stars
-                        </p>
+                    <div class="col-md-12">
+
+                        <asp:Label ID="CharityNameLabel" runat="server" Text="Label" Font-Bold Font-Size ="30"   ></asp:Label>
+                            
+                        <div align="center">
+                            <img src ="/images/believe.png" alt ="There should be an image here" />
+                        </div>
+
+                        <div align="right">
+                            <label
+                            <asp:Label ID="TotalRaisedLabel" runat="server" Text="Label" Font-Bold Font-Size="25"></asp:Label>
+                        </div>
+                        <div align ="center">
+                            <asp:Label ID="DescriptionLabel" runat="server" Text="Label"></asp:Label>
+                        </div>
                     </div>
                 </div>
 
