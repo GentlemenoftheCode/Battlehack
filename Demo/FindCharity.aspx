@@ -37,25 +37,29 @@
                     { 'data': 'Name' },
                     { 'data': 'Description' },
                     { 'data': 'Tags' },
-                    { 'data': 'CharityID' }
+                    { 'data': 'null' }
 
                 ],
                 "columnDefs": [{
                     "targets": -1,
                     "data": null,
-                    "defaultContent": "<button>View Charity</button>"
+                    "defaultContent": "<button>Click!</button>"
                 }]
             }
             );
-
-
             $('#example tbody').on('click', 'button', function () {
                 var data = table.row($(this).parents('tr')).data();
                 alert(data.Name + "'s id is: " + data.CharityID);
             });
 
-        });
+            //$('#example tbody').on('click', 'button', function () {
+            //    var data = table.row($(this).parents('tr')).data();
+            //    alert("Hello");
+            //    //alert(data.Name + "'s id is: " + data.CharityID);
+            //});
 
+        });
+        
 
     </script>
 
