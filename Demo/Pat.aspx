@@ -1,9 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Pat.aspx.cs" Inherits="Demo.Pat" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-</asp:Content>
-
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="PatContent" ContentPlaceHolderID="MainContent" runat="server">
 
 
     <div style="height: 100px"></div>
@@ -24,13 +21,16 @@
                 <div class="col-md-3 col-md-offset-1 box">
 
 
-                    <asp:Label ID="Label1" runat="server" CssClass="label label-default" Text="This text will change upon button-click."></asp:Label>
+                    <asp:Label ID="Label1" runat="server" CssClass="label label-default"></asp:Label>
 
 
                 </div>
                 <div class="col-md-3 col-md-offset-1 box">
+                      
+            <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" Text="Pls." OnClick="Button2_Click" />
 
-                    <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Pls." OnClick="Button1_Click" />
+
+                    <asp:Label ID="patLabel1" runat="server"></asp:Label>
                 </div>
             </div>
         </ContentTemplate>

@@ -2,4 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <p> slks</p>
-</asp:Content>
+    <asp:DropDownList ID="MenuDDL" runat="server">
+        <asp:ListItem Text="cock"></asp:ListItem>
+        <asp:ListItem Text="balls"></asp:ListItem>    
+
+    </asp:DropDownList>
+    </asp:Content>

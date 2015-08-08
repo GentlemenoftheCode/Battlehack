@@ -13,5 +13,10 @@ namespace Demo
         {
 
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            patLabel1.Text = "Lick my butthole.";
+        }
     }
 }
