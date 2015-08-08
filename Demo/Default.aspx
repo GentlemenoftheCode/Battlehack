@@ -15,8 +15,8 @@
 
                 <div class="row">
                 <div class="col-md-4"><img src="/images/american_national_redcross.jpg" alt="American Red Cross Logo" style="width:414px;height:414px;"></div>
-                <div class="col-md-4"><img src="/images/feeding_america.jpg" alt="Feeding America Logo" style="width:414px;height:414px;"></div>
-                <div class="col-md-4"><img src="/images/salvation_army.jpg" alt="Salvation Army Logo" style="width:414px;height:414px;"></div>
+                <div class="col-md-4"><img src="/images/feeding-america.jpg" alt="Feeding America Logo" style="width:414px;height:414px;"></div>
+                <div class="col-md-4"><img src="/images/salvation-army.jpg" alt="Salvation Army Logo" style="width:414px;height:414px;"></div>
                 </div>
 
                <div class="row">
