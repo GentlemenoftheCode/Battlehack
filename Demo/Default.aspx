@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Demo._Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Demo._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -11,7 +11,7 @@
 
                 <h5>Join a raffle, get a chance to win cash money while helping a charity.</h5>
 
-                <asp:Button runat="server" CssClass="btn btn-primary" Text="Join now!" />
+                <asp:Button ID="getStartedButton" runat="server" CssClass="btn btn-primary" Text="Get Started!" PostBackUrl="~/FindCharity.aspx"/>
 
             </div>
 

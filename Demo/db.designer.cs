@@ -300,6 +300,8 @@ namespace Demo
 		
 		private System.Data.Linq.Binary _Logo;
 		
+		private string _Tags;
+		
 		private EntitySet<Raffle> _Raffles;
 		
     #region Extensibility Method Definitions
@@ -316,6 +318,8 @@ namespace Demo
     partial void OnWebsiteURLChanged();
     partial void OnLogoChanging(System.Data.Linq.Binary value);
     partial void OnLogoChanged();
+    partial void OnTagsChanging(string value);
+    partial void OnTagsChanged();
     #endregion
 		
 		public Charity()
@@ -420,6 +424,26 @@ namespace Demo
 					this._Logo = value;
 					this.SendPropertyChanged("Logo");
 					this.OnLogoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tags", DbType="NVarChar(MAX)")]
+		public string Tags
+		{
+			get
+			{
+				return this._Tags;
+			}
+			set
+			{
+				if ((this._Tags != value))
+				{
+					this.OnTagsChanging(value);
+					this.SendPropertyChanging();
+					this._Tags = value;
+					this.SendPropertyChanged("Tags");
+					this.OnTagsChanged();
 				}
 			}
 		}
