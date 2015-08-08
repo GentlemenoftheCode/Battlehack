@@ -228,6 +228,7 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="FCharity.aspx" />
     <Content Include="FindCharity.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -449,6 +450,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FCharity.aspx.cs">
+      <DependentUpon>FCharity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FCharity.aspx.designer.cs">
+      <DependentUpon>FCharity.aspx</DependentUpon>
     </Compile>
     <Compile Include="FindCharity.aspx.cs">
       <DependentUpon>FindCharity.aspx</DependentUpon>

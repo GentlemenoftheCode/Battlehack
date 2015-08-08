@@ -1,6 +1,6 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
+    padding-top: 90px;
     padding-bottom: 20px;
    
 }
@@ -77,13 +77,26 @@ input[type="select"] {
 
 .NameLabel{
 
-
+    font-weight: bold;
+    font-size: 200%;
 
 }
 
 .DescLabel{
 
 
+
+}
+
+.StaticRaisedLabel{
+
+    font-weight: bold;
+    font-size: 125%;
+}
+
+.RaisedLabel{
+    font-weight: bold;
+    font-size: 150%;
 
 }
 
