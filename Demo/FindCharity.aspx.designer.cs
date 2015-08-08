@@ -11,7 +11,7 @@ namespace Demo
 {
 
 
-    public partial class Dave
+    public partial class FindCharity
     {
     }
 }
