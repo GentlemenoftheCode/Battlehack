@@ -21,6 +21,20 @@
 
                <asp:Button runat="server" CssClass="btn btn-primary" Text="Join now!" />
 
+                <div class="row">
+                <div class="col-md-4"><img src="/images/american_national_redcross.jpg" alt="American Red Cross Logo" style="width:414px;height:414px;"></div>
+                <div class="col-md-4"><img src="/images/feeding_america.jpg" alt="Feeding America Logo" style="width:414px;height:414px;"></div>
+                <div class="col-md-4"><img src="/images/salvation_army.jpg" alt="Salvation Army Logo" style="width:414px;height:414px;"></div>
+                </div>
+
+               <div class="row">
+                <div class="col-md-4"><img src="/images/task-force-for-global-health.jpg" alt="Task Force for Global Health Logo" style="width:414px;height:414px;"></div>
+                <div class="col-md-4"><img src="/images/united-way.jpg" alt="United Way Logo" style="width:414px;height:414px;"></div>
+                <div class="col-md-4"><img src="/images/goodwill-industries.jpg" alt="Goodwill Industries Intentational Logo" style="width:414px;height:414px;"></div>
+               </div>
+
+</div>
+
            </div>
        </div>
        <br />
