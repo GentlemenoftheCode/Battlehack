@@ -27,7 +27,6 @@
                     <img src="/images/feeding-america.jpg" alt="Feeding America Logo" class="featured-logo"></div>
                 <div class="col-lg-4 col-sm-6 col-xs-12">
                     <img src="/images/salvation-army.jpg" alt="Salvation Army Logo" class="featured-logo"></div>
-           
                 <div class="col-lg-4 col-sm-6 col-xs-12">
                     <img src="/images/task-force-for-global-health.jpg" alt="Task Force for Global Health Logo" class="featured-logo"></div>
                 <div class="col-lg-4 col-sm-6 col-xs-12">
