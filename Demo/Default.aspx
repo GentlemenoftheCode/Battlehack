@@ -21,15 +21,15 @@
        <div class="row" id="FeaturedRaffles">
 
                 <div class="row">
-                <div class="col-md-4"><img src="/images/american_national_redcross.jpg" alt="American Red Cross Logo" style="width:400px;height:400px;"></div>
-                <div class="col-md-4"><img src="/images/feeding-america.jpg" alt="Feeding America Logo" style="width:400px;height:400px;"></div>
-                <div class="col-md-4"><img src="/images/salvation-army.jpg" alt="Salvation Army Logo" style="width:400px;height:400px;"></div>
+                <div class="col-md-4"><img src="/images/american_national_redcross.jpg" alt="American Red Cross Logo" style="width:350px;height:350px;"></div>
+                <div class="col-md-4"><img src="/images/feeding-america.jpg" alt="Feeding America Logo" style="width:350px;height:350px;"></div>
+                <div class="col-md-4"><img src="/images/salvation-army.jpg" alt="Salvation Army Logo" style="width:350px;height:350px;"></div>
                 </div>
 
                <div class="row">
-                <div class="col-md-4"><img src="/images/task-force-for-global-health.jpg" alt="Task Force for Global Health Logo" style="width:400px;height:400px;"></div>
-                <div class="col-md-4"><img src="/images/united-way.jpg" alt="United Way Logo" style="width:400px;height:400px;"></div>
-                <div class="col-md-4"><img src="/images/goodwill-industries.jpg" alt="Goodwill Industries Intentational Logo" style="width:400px;height:400px;"></div>
+                <div class="col-md-4"><img src="/images/task-force-for-global-health.jpg" alt="Task Force for Global Health Logo" style="width:350px;height:350px;"></div>
+                <div class="col-md-4"><img src="/images/united-way.jpg" alt="United Way Logo" style="width:350px;height:350px;"></div>
+                <div class="col-md-4"><img src="/images/goodwill-industries.jpg" alt="Goodwill Industries Intentational Logo" style="width:350px;height:350px;"></div>
                </div>
 
 
