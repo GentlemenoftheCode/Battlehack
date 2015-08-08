@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FCharity.aspx.cs" Inherits="Demo.Charity" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FCharity.aspx.cs" Inherits="Demo.FCharity" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <div class="col-md-12">
@@ -63,7 +63,9 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                            <span class="pull-right">Ends <asp:Label ID="endTime3" runat="server" Text="soon"></asp:Label></span>
+                            <span class="pull-right">Ends 
+                                <asp:Label ID="endTimethree" runat="server" Text="soon"></asp:Label>
+                            </span>
                             <p class="lead">
                                 <asp:Label ID="raffleTitle3" runat="server" Text="Title"></asp:Label>
                             </p>

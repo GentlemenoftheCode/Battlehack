@@ -10,7 +10,7 @@
 namespace Demo {
     
     
-    public partial class Charity {
+    public partial class FCharity {
         
         /// <summary>
         /// CharityNameLabel control.
@@ -94,13 +94,13 @@ namespace Demo {
         protected global::System.Web.UI.WebControls.Label raffleDis2;
         
         /// <summary>
-        /// endTime3 control.
+        /// endTimethree control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label endTime3;
+        protected global::System.Web.UI.WebControls.Label endTimethree;
         
         /// <summary>
         /// raffleTitle3 control.
