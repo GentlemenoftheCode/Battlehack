@@ -67,4 +67,9 @@ input[type="select"] {
     height: 100%;
     padding:3px;
     border-bottom: 3px solid #F38630;
+    
+}
+
+.featured-logo:hover {
+    border-bottom: 3px solid #00CCFF;
 }
