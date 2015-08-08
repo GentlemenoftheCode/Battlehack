@@ -16,7 +16,6 @@
                         <asp:ListItem>Farts</asp:ListItem>
                         <asp:ListItem>Dick butt</asp:ListItem>
                         <asp:ListItem>Dick butt farts</asp:ListItem>
-                        ayayayayayayayyayyaayaay
                     </asp:DropDownList>
                 </div>
                 <%--<div class="col-md-3 col-md-offset-1 box">
