@@ -22,6 +22,15 @@ namespace Demo {
         protected global::System.Web.UI.WebControls.Label CharityNameLabel;
         
         /// <summary>
+        /// StaticRaisedLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StaticRaisedLabel;
+        
+        /// <summary>
         /// TotalRaisedLabel control.
         /// </summary>
         /// <remarks>

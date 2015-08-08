@@ -9,6 +9,7 @@
                     <p>
                         <asp:Label ID="CharityNameLabel" runat="server" Text="Label" CssClass="NameLabel"></asp:Label>
                     </p>
+                    <asp:Label ID="StaticRaisedLabel" runat="server" Text="Raised so far: " CssClass="StaticRaisedLabel"></asp:Label>
                     <asp:Label ID="TotalRaisedLabel" runat="server" Text="Label" CssClass="RaisedLabel"></asp:Label>
                 </div>
                 <div>

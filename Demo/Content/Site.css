@@ -88,6 +88,12 @@ input[type="select"] {
 
 }
 
+.StaticRaisedLabel{
+
+    font-weight: bold;
+    font-size: 125%;
+}
+
 .RaisedLabel{
     font-weight: bold;
     font-size: 150%;
