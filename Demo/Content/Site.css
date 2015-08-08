@@ -74,3 +74,9 @@ input[type="select"] {
 .featured-logo:hover {
     border-bottom: 3px solid #00CCFF;
 }
+
+.navbarElement {
+  position: relative;
+  top: 50%;
+  transform: translateY(+50%);
+}
