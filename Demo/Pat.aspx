@@ -21,13 +21,16 @@
                 <div class="col-md-3 col-md-offset-1 box">
 
 
-                    <asp:Label ID="Label1" runat="server" CssClass="label label-default" Text="This text will change upon button-click."></asp:Label>
+                    <asp:Label ID="Label1" runat="server" CssClass="label label-default"></asp:Label>
 
 
                 </div>
                 <div class="col-md-3 col-md-offset-1 box">
                       
-            <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" Text="Pls." OnClick="Button1_Click" />
+            <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" Text="Pls." OnClick="Button2_Click" />
+
+
+                    <asp:Label ID="patLabel1" runat="server"></asp:Label>
                 </div>
             </div>
         </ContentTemplate>
