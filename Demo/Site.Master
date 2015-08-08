@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> Giraffle </title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -52,12 +52,14 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/FindCharity">Find a Charity</a></li>
-                        <li><a runat="server" href="~/Roshin">Roshin</a></li>
                         <li><a runat="server" href="~/Charity">Charity</a></li>
+                        <li><a runat="server" href="~/Roshin">Roshin</a></li>
 
                     </ul>
 
                     <!-- Start Pat Code -->
+
+
                     <ul class="nav navbar-nav pull-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>My Account
@@ -79,11 +81,10 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul>
-                    <!-- end nav pull-right -->
+                    </ul><!-- end nav pull-right -->
                     <!-- End Pat Code -->
 
-                   <%-- <asp:LoginView runat="server" ViewStateMode="Disabled">
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
@@ -94,7 +95,7 @@
                                 </li>
                             </ul>
                         </LoggedInTemplate>
-                    </asp:LoginView>--%>
+                    </asp:LoginView>
                 </div>
             </div>
         </div>
