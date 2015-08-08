@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-md-3 col-md-offset-1 box">
                       
-            <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Pls." OnClick="Button1_Click" />
+            <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" Text="Pls." OnClick="Button1_Click" />
                 </div>
             </div>
         </ContentTemplate>
