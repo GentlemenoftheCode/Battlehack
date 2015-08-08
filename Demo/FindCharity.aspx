@@ -2,22 +2,22 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <script src="Scripts/jquery.dataTables.min.js"></script>
-    <div style="height:10px"></div>
-        <div class="col-md-12" >
+    <div style="height: 10px"></div>
+    <div class="col-md-12">
 
-            <table id="example" class="display">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Tags</th>
+        <table id="example" class="display">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Tags</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
 
-                    </tr>
-                </thead>
-            </table>
+    </div>
 
-        </div>
-    
     <script type="text/javascript">
 
         var playerUrl = '/api/Charity';
@@ -36,14 +36,30 @@
                 'columns': [
                     { 'data': 'Name' },
                     { 'data': 'Description' },
-                    { 'data': 'Tags' }
+                    { 'data': 'Tags' },
+                    { 'data': 'null' }
 
-                ]
+                ],
+                "columnDefs": [{
+                    "targets": -1,
+                    "data": null,
+                    "defaultContent": "<button>Click!</button>"
+                }]
             }
             );
+            $('#example tbody').on('click', 'button', function () {
+                var data = table.row($(this).parents('tr')).data();
+                alert(data.Name + "'s id is: " + data.CharityID);
+            });
+
+            //$('#example tbody').on('click', 'button', function () {
+            //    var data = table.row($(this).parents('tr')).data();
+            //    alert("Hello");
+            //    //alert(data.Name + "'s id is: " + data.CharityID);
+            //});
 
         });
-
+        
 
     </script>
 

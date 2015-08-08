@@ -1,6 +1,6 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
+    padding-top: 90px;
     padding-bottom: 20px;
    
 }
@@ -73,4 +73,29 @@ input[type="select"] {
 
 .featured-logo:hover {
     border-bottom: 3px solid #00CCFF;
+}
+
+.NameLabel{
+
+    font-weight: bold;
+    font-size: 30;
+
+}
+
+.DescLabel{
+
+
+
+}
+
+.RaisedLabel{
+    font-weight: bold;
+    font-size: 25;
+
+}
+
+.navbarElement {
+  position: relative;
+  top: 50%;
+  transform: translateY(+50%);
 }
