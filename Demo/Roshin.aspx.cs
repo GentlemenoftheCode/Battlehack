@@ -12,6 +12,14 @@ namespace Demo
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            DateTime hello = Calendar1.SelectedDate;
+            Label1.Text = hello.DayOfWeek.ToString();
+            Label2.Text = hello.Date.ToString();
         }
     }
 }
