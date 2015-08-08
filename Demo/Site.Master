@@ -73,8 +73,17 @@
                 </div>
             </div>
         </div>
+        <div class="col-xs-12 master-head">
+
+                    <img src="Images/logo.PNG" />
+
+                </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                
+
+
+
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
