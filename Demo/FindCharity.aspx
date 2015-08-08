@@ -9,10 +9,9 @@
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th></th>
                     <th>Description</th>
                     <th>Tags</th>
-
+                    <th></th>
                 </tr>
             </thead>
         </table>
@@ -36,15 +35,15 @@
                 },
                 'columns': [
                     { 'data': 'Name' },
-                    { 'data': 'CharityID'},
                     { 'data': 'Description' },
-                    { 'data': 'Tags' }
+                    { 'data': 'Tags' },
+                    { 'data': 'CharityID' }
 
                 ],
                 "columnDefs": [{
                     "targets": -1,
                     "data": null,
-                    "defaultContent": "<button>Click!</button>"
+                    "defaultContent": "<button>View Charity</button>"
                 }]
             }
             );
