@@ -1,16 +1,3 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Pat.aspx.cs" Inherits="Demo.Pat" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    <p contenteditable>JUST LIKE ME GRANDMAMA!</p>
-    </div>
-    </form>
-</body>
-</html>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Pat.aspx.cs" Inherits="Demo.Pat" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+</asp:Content>
