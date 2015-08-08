@@ -7,5 +7,7 @@
         <asp:ListItem Text="balls"></asp:ListItem>    
 
     </asp:DropDownList>
+    <asp:BulletedList ID ="bullets" runat ="server" 
+      t
     <asp:Label ID ="stuff" Text ="Hi"></asp:Label>
     </asp:Content>
