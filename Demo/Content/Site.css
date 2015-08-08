@@ -77,13 +77,20 @@ input[type="select"] {
 
 .NameLabel{
 
-
+    font-weight: bold;
+    font-size: 30;
 
 }
 
 .DescLabel{
 
 
+
+}
+
+.RaisedLabel{
+    font-weight: bold;
+    font-size: 25;
 
 }
 
