@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BattleHackDB" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=gfv92zyrqv.database.windows.net;Initial Catalog=BattleHackDB;Persist Security Info=True;User ID=CocUser" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AzureServer" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Raffle" Member="Raffles">
+    <Type Name="Raffle">
+      <Column Name="RaffleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CharityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TicketsEntered" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsersEntered" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ObjectiveDollars" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="Charity_Raffle" Member="Charity" ThisKey="CharityID" OtherKey="CharityID" Type="Charity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Charity" Member="Charities">
+    <Type Name="Charity">
+      <Column Name="CharityID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WebsiteURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Logo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Charity_Raffle" Member="Raffles" ThisKey="CharityID" OtherKey="CharityID" Type="Raffle" />
+    </Type>
+  </Table>
+</Database>
