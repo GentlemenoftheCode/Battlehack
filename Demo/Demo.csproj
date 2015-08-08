@@ -397,7 +397,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Charity.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Raffle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roshin.aspx.cs">
       <DependentUpon>Roshin.aspx</DependentUpon>
