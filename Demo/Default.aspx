@@ -11,7 +11,7 @@
 
                 <h5>Join a raffle, get a chance to win cash money while helping a charity.</h5>
 
-                <asp:Button ID="getStartedButton" runat="server" CssClass="btn btn-primary" Text="Get Started!" PostBackUrl="~/Charity.aspx"/>
+                <asp:Button ID="getStartedButton" runat="server" CssClass="btn btn-primary" Text="Get Started! Check if the button works now!" PostBackUrl="~/Charity.aspx"/>
 
             </div>
 
