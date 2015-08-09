@@ -48,6 +48,7 @@
                         <button type="submit" class="btn btn-default btn-lg" id ="Submit" runat="server" OnClick="" >Calculate</button>
                     </div>
                     <br />
+                    <asp:Label ID="TotalText" runat="server" Text=""></asp:Label>
                     <div class="alert alert-danger" role="alert" runat="server" id="alertBox" visible="false">
                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                        <span class="sr-only">Error:<asp:Label ID="inputError" runat="server" Text="YouShouldn'tSeeThis"></asp:Label></span>
