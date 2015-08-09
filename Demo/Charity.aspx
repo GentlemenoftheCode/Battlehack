@@ -7,7 +7,7 @@
             <div class="panel-body charity-panel-body">
                 <div class="col-md-4" style="text-align: center;">
                     <asp:Image runat="server" ID="imageLogo" CssClass="regular-logo" />
-                    <asp:Label ID="CharityLinkLabel" runat="server" CssClass="btn btn-link"><a id="CharityWebsiteLink" runat="server">View this charities website</a></asp:Label>
+                    <asp:Label ID="CharityLinkLabel" runat="server" CssClass="btn btn-link"><a id="CharityWebsiteLink" runat="server">View this charity's website</a></asp:Label>
 
                 </div>
                 <div class="col-md-8">
