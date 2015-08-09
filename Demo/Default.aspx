@@ -28,8 +28,8 @@
                             <div class="slide-1"></div>
                             <div class="hero">
                                 <hgroup>
-                                    <h1>Purchase raffle tickets!</h1>
-                                    <h3>Don't worry; we donate all profits to the host-charity</h3>
+                                    <h1>Be a Micro-Philanthropist!</h1>
+                                    <h3>Half of every raffle ticket purchased goes directly to charity. The other half is added to a winnable "pot."</h3>
                                 </hgroup>
                                 <asp:Button ID="ButtonSlide1" runat="server" CssClass="btn btn-hero btn-lg" Text="Browse Raffles" PostBackUrl="~/FindCharity.aspx" />
                             </div>
@@ -38,20 +38,20 @@
                             <div class="slide-2"></div>
                             <div class="hero">
                                 <hgroup>
-                                    <h1>Suggest a Charity!</h1>
-                                    <h3>We're always looking for new non-profits that could benefit from using our platform</h3>
+                                    <h1>Get Rewarded for Being a Good Person!</h1>
+                                    <h3>If your raffle ticket is selected, you win 50% of the total raffle sales for that raffle.</h3>
                                 </hgroup>
-                                <asp:Button ID="ButtonSlide2" runat="server" CssClass="btn btn-hero btn-lg" Text="Suggest a Charity" PostBackUrl="~/FindCharity.aspx" />
+                                <asp:Button ID="ButtonSlide2" runat="server" CssClass="btn btn-hero btn-lg" Text="Give it a Try!" PostBackUrl="~/FindCharity.aspx" />
                             </div>
                         </div>
                         <div class="item slides">
                             <div class="slide-3"></div>
                             <div class="hero">
                                 <hgroup>
-                                    <h1>Browse Non-Profits!</h1>
-                                    <h3>These charities count on you, and so do the people they help</h3>
+                                    <h1>We Want to Help your Charity of Choice!</h1>
+                                    <h3>Suggesting charities for consideration potentially gives them access to new donation streams.</h3>
                                 </hgroup>
-                                <asp:Button ID="ButtonSlide3" runat="server" CssClass="btn btn-hero btn-lg" Text="Browse Charities" PostBackUrl="~/FindCharity.aspx" />
+                                <asp:Button ID="ButtonSlide3" runat="server" CssClass="btn btn-hero btn-lg" Text="Pitch a Charity" PostBackUrl="~/SuggestCharity.aspx" />
                             </div>
                         </div>
                     </div>
@@ -63,8 +63,8 @@
             </div>
             <br />
             <div class="row" id="FeaturedRaffles">
-                <h1 style="text-align: center">We connect people to charities. Each raffle guarantees 50% of the winnings to your favorite charity,
-                    and each ticket gives you a chance of winning the rest!
+                <h1 style="text-align: center">We connect people to charities. Each ticket increases your chances 
+                    and guarantees your favorite charity 50% of the winnings!
                 </h1>
                 <div class="row-fluid">
                     <h2 style="text-align: center">Our Featured Charities: </h2>

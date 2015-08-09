@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SuggestCharity.aspx.cs" Inherits="Demo.SuggestCharity" %>
 
 <asp:Content ID="SuggestCharity" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="container">
+    <div class="container" style="padding:15px">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="well well-sm">
@@ -19,9 +19,9 @@
 
                             <!-- Email input-->
                             <div class="form-group">
-                                <label class="col-md-3 control-label" for="email">E-mail</label>
+                                <label class="col-md-3 control-label" for="email">URL</label>
                                 <div class="col-md-9">
-                                    <input id="email" name="email" type="text" placeholder="Charity E-mail" class="form-control">
+                                    <input id="email" name="email" type="text" placeholder="Charity URL" class="form-control">
                                 </div>
                             </div>
 
