@@ -9,7 +9,8 @@ using Microsoft.Owin.Security.Google;
 using Owin;
 using Demo.Models;
 using Microsoft.Owin.Security.Twitter;
-
+using System.Security.Claims;
+using System.Threading.Tasks;
 namespace Demo
 {
     public partial class Startup {
@@ -51,14 +52,27 @@ namespace Demo
             //app.UseMicrosoftAccountAuthentication(
             //    clientId: "",
             //    clientSecret: "");
+            var options = new TwitterAuthenticationOptions
+            {
+                ConsumerKey = "DGdww0YB4GUdYNEUY0CKwHoWm",
+                ConsumerSecret = "dBOCKyDfdJYpPi8rVBjGka0OVhXeh8FsBnAQtUMCKeXeZPxwjX",
+                Provider = new TwitterAuthenticationProvider
+                {
+                    OnAuthenticated = context =>
+                    {
+                        context.Identity.AddClaim(new Claim("urn:token:twitter", context.AccessToken));
 
-            app.UseTwitterAuthentication(
-               consumerKey: "DGdww0YB4GUdYNEUY0CKwHoWm",
-               consumerSecret: "dBOCKyDfdJYpPi8rVBjGka0OVhXeh8FsBnAQtUMCKeXeZPxwjX"
+                        return Task.FromResult(true);
+                    }
 
 
-               );
+                }
 
+            };
+
+            app.UseTwitterAuthentication(options);
+
+     
 
             //app.UseFacebookAuthentication(
             //   appId: "",

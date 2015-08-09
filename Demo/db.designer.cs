@@ -36,6 +36,9 @@ namespace Demo
     partial void InsertRaffle(Raffle instance);
     partial void UpdateRaffle(Raffle instance);
     partial void DeleteRaffle(Raffle instance);
+    partial void InsertTicket(Ticket instance);
+    partial void UpdateTicket(Ticket instance);
+    partial void DeleteTicket(Ticket instance);
     #endregion
 		
 		public dbDataContext() : 
@@ -81,6 +84,14 @@ namespace Demo
 			get
 			{
 				return this.GetTable<Raffle>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Ticket> Tickets
+		{
+			get
+			{
+				return this.GetTable<Ticket>();
 			}
 		}
 	}
@@ -319,6 +330,8 @@ namespace Demo
 		
 		private string _Title;
 		
+		private EntitySet<Ticket> _Tickets;
+		
 		private EntityRef<Charity> _Charity;
 		
     #region Extensibility Method Definitions
@@ -347,6 +360,7 @@ namespace Demo
 		
 		public Raffle()
 		{
+			this._Tickets = new EntitySet<Ticket>(new Action<Ticket>(this.attach_Tickets), new Action<Ticket>(this.detach_Tickets));
 			this._Charity = default(EntityRef<Charity>);
 			OnCreated();
 		}
@@ -535,6 +549,19 @@ namespace Demo
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Raffle_Ticket", Storage="_Tickets", ThisKey="RaffleID", OtherKey="RaffleID")]
+		public EntitySet<Ticket> Tickets
+		{
+			get
+			{
+				return this._Tickets;
+			}
+			set
+			{
+				this._Tickets.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Charity_Raffle", Storage="_Charity", ThisKey="CharityID", OtherKey="CharityID", IsForeignKey=true)]
 		public Charity Charity
 		{
@@ -565,6 +592,217 @@ namespace Demo
 						this._CharityID = default(int);
 					}
 					this.SendPropertyChanged("Charity");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Tickets(Ticket entity)
+		{
+			this.SendPropertyChanging();
+			entity.Raffle = this;
+		}
+		
+		private void detach_Tickets(Ticket entity)
+		{
+			this.SendPropertyChanging();
+			entity.Raffle = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Ticket")]
+	public partial class Ticket : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _TicketID;
+		
+		private string _UserName;
+		
+		private int _RaffleID;
+		
+		private decimal _TicketPrice;
+		
+		private System.Nullable<bool> _Valid;
+		
+		private EntityRef<Raffle> _Raffle;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTicketIDChanging(int value);
+    partial void OnTicketIDChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnRaffleIDChanging(int value);
+    partial void OnRaffleIDChanged();
+    partial void OnTicketPriceChanging(decimal value);
+    partial void OnTicketPriceChanged();
+    partial void OnValidChanging(System.Nullable<bool> value);
+    partial void OnValidChanged();
+    #endregion
+		
+		public Ticket()
+		{
+			this._Raffle = default(EntityRef<Raffle>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int TicketID
+		{
+			get
+			{
+				return this._TicketID;
+			}
+			set
+			{
+				if ((this._TicketID != value))
+				{
+					this.OnTicketIDChanging(value);
+					this.SendPropertyChanging();
+					this._TicketID = value;
+					this.SendPropertyChanged("TicketID");
+					this.OnTicketIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this.OnUserNameChanging(value);
+					this.SendPropertyChanging();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RaffleID", DbType="Int NOT NULL")]
+		public int RaffleID
+		{
+			get
+			{
+				return this._RaffleID;
+			}
+			set
+			{
+				if ((this._RaffleID != value))
+				{
+					if (this._Raffle.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnRaffleIDChanging(value);
+					this.SendPropertyChanging();
+					this._RaffleID = value;
+					this.SendPropertyChanged("RaffleID");
+					this.OnRaffleIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketPrice", DbType="Money NOT NULL")]
+		public decimal TicketPrice
+		{
+			get
+			{
+				return this._TicketPrice;
+			}
+			set
+			{
+				if ((this._TicketPrice != value))
+				{
+					this.OnTicketPriceChanging(value);
+					this.SendPropertyChanging();
+					this._TicketPrice = value;
+					this.SendPropertyChanged("TicketPrice");
+					this.OnTicketPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Valid", DbType="Bit")]
+		public System.Nullable<bool> Valid
+		{
+			get
+			{
+				return this._Valid;
+			}
+			set
+			{
+				if ((this._Valid != value))
+				{
+					this.OnValidChanging(value);
+					this.SendPropertyChanging();
+					this._Valid = value;
+					this.SendPropertyChanged("Valid");
+					this.OnValidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Raffle_Ticket", Storage="_Raffle", ThisKey="RaffleID", OtherKey="RaffleID", IsForeignKey=true)]
+		public Raffle Raffle
+		{
+			get
+			{
+				return this._Raffle.Entity;
+			}
+			set
+			{
+				Raffle previousValue = this._Raffle.Entity;
+				if (((previousValue != value) 
+							|| (this._Raffle.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Raffle.Entity = null;
+						previousValue.Tickets.Remove(this);
+					}
+					this._Raffle.Entity = value;
+					if ((value != null))
+					{
+						value.Tickets.Add(this);
+						this._RaffleID = value.RaffleID;
+					}
+					else
+					{
+						this._RaffleID = default(int);
+					}
+					this.SendPropertyChanged("Raffle");
 				}
 			}
 		}

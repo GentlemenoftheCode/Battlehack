@@ -14,11 +14,24 @@
         <elementListCompartment Id="4cfdf591-7d59-4631-a2dc-e67ff3a83852" absoluteBounds="4.39, 1.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.625 : 1.85659912109375); (4.375 : 1.85659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.625 : 1.85659912109375); (4.375 : 1.85659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDataContext/Charity/Charity_Raffle" />
       <nodes>
         <classShapeMoniker Id="71d69f40-ba6b-4a33-b5ee-06297adf93df" />
         <classShapeMoniker Id="0a3a92a6-e7a9-4a71-8889-cc15a351a4bb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="53103f76-a1eb-421b-bc58-8b94c7cb1931" absoluteBounds="2.5, 4.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/dbDataContext/Ticket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50b448ae-747a-46c5-9823-8cae9e9a78e1" absoluteBounds="2.515, 4.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.4375005 : 3.4151025390625); (5.4375005 : 5.26044840494792); (4.5 : 5.26044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbDataContext/Raffle/Raffle_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="0a3a92a6-e7a9-4a71-8889-cc15a351a4bb" />
+        <classShapeMoniker Id="53103f76-a1eb-421b-bc58-8b94c7cb1931" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
