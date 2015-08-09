@@ -19,7 +19,63 @@
                 </div>
             </div>
         </div>
+
+               <div class="well" id="Roshin">
+
+                    <div class="text-right">
+                        <a class="btn btn-success">Suggest a Charity</a>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <span class="pull-right"><asp:Label ID="endTime1" runat="server" Text="soon"></asp:Label></span>
+                            <p class="lead">
+                                <asp:Label ID="raffleTitle1" runat="server" Text="Title"></asp:Label>
+                            </p>
+                            <p>
+                                <asp:Label ID="raffleDis1" runat="server" Text="raffle description"></asp:Label>
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                     <div class="row">
+                        <div class="col-md-12">
+
+                            <span class="pull-right"><asp:Label ID="endTime2" runat="server" Text="soon"></asp:Label></span>
+                            <p class="lead">
+                                <asp:Label ID="raffleTitle2" runat="server" Text="Title"></asp:Label>
+                            </p>
+                            <p>
+                                <asp:Label ID="raffleDis2" runat="server" Text="raffle description"></asp:Label>
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <span class="pull-right"> 
+                                <asp:Label ID="endTime3" runat="server" Text="soon"></asp:Label>
+                            </span>
+                            <p class="lead">
+                                <asp:Label ID="raffleTitle3" runat="server" Text="Title"></asp:Label>
+                            </p>
+                            <p>
+                                <asp:Label ID="raffleDis3" runat="server" Text="raffle description"></asp:Label>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
     </div>
+
 
 
 
