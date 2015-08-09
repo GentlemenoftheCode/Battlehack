@@ -394,3 +394,7 @@ Image credits: unsplash.com
     display: none;
 
 }
+
+body {
+    padding-top: 20px;
+}
