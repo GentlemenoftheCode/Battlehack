@@ -70,7 +70,7 @@ namespace Demo
             CharityNameLabel.Text = Name;
             TotalRaisedLabel.Text = TotalRaised;
             DescriptionLabel.Text = about;
-            CharityURL.Text = imgURL;
+            //CharityURL.Text = imgURL;
 
             //Calculate the days left.
             //REPLACE.
