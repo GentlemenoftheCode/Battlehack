@@ -242,6 +242,7 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="favicon.ico" />
     <Content Include="FCharity.aspx" />
     <Content Include="FindCharity.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
