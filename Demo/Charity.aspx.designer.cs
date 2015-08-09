@@ -58,15 +58,6 @@ namespace Demo {
         protected global::System.Web.UI.UpdatePanel raffleUP;
         
         /// <summary>
-        /// endTime1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label endTime1;
-        
-        /// <summary>
         /// StaticMoneyRaised control.
         /// </summary>
         /// <remarks>
@@ -94,13 +85,13 @@ namespace Demo {
         protected global::System.Web.UI.WebControls.Label StaticEndLabel;
         
         /// <summary>
-        /// EndLabel control.
+        /// raffleEndLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EndLabel;
+        protected global::System.Web.UI.WebControls.Label raffleEndLabel;
         
         /// <summary>
         /// StaticPrizeLabel control.
@@ -137,5 +128,50 @@ namespace Demo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label EnteredLabel;
+        
+        /// <summary>
+        /// numTicketsBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox numTicketsBox;
+        
+        /// <summary>
+        /// calcPriceBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button calcPriceBtn;
+        
+        /// <summary>
+        /// paymentAmount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label paymentAmount;
+        
+        /// <summary>
+        /// alertBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertBox;
+        
+        /// <summary>
+        /// inputError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label inputError;
     }
 }

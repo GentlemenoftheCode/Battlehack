@@ -67,7 +67,7 @@
                 <div class="row-fluid">
                     <h2 style="text-align: center">Our Featured Charities: </h2>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                        <img src="/images/american_national_redcross.jpg" alt="American Red Cross Logo" class="featured-logo">
+                        <a href="/Charity?ID=1000"><img src="/images/american_national_redcross.jpg" alt="American Red Cross Logo" class="featured-logo"></a>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
                         <img src="/images/feeding-america.jpg" alt="Feeding America Logo" class="featured-logo">
