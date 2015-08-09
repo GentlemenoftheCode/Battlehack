@@ -258,13 +258,58 @@ Image credits: unsplash.com
 /********************************/
 /*          Media Queries       */
 /********************************/
-@media screen and (min-width: 992px) {
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+/*@media (min-width: 768px) {
     .hero {
-        width: 980px;
+        width: 100%;
     }
+
+        .hero h1 {
+            font-size: 1.5em;
+        }
+
+        .hero h3 {
+            font-size: .75em;
+        }
+}*/
+
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: 992px) {
+    .hero {
+        width: 100%;
+    }
+
+        .hero h1 {
+            font-size: 1.5em;
+        }
+
+        .hero h3 {
+            font-size: .75em;
+        }
+}*/
+
+/* Large devices (large desktops, 1200px and up) */
+/*@media (min-width: 1200px) {
+
+    .hero {
+        width: 100%;
+    }
+
+        .hero h1 {
+            font-size: 1.5em;
+        }
+
+        .hero h3 {
+            font-size: .75em;
+        }
+}*/
+.hero {
+    width: 100%;
 }
 
-@media screen and (max-width: 768px) {
     .hero h1 {
         font-size: 1.5em;
     }
@@ -272,7 +317,7 @@ Image credits: unsplash.com
     .hero h3 {
         font-size: .75em;
     }
-}
+
 
 /* End Carousel CSS */
 
@@ -351,8 +396,6 @@ Image credits: unsplash.com
     .paymentCalcArea:hover {
         border-left: 2px solid #00CCFF;
         border-bottom: 2px solid #00CCFF;
-        
-       
         padding: 10px;
         margin: 4px;
         -webkit-transform: scale(1.05);
@@ -361,7 +404,7 @@ Image credits: unsplash.com
         -ms-transform: scale(1.05);
     }
 
-    .paymentArea {
+.paymentArea {
     border-left: 2px solid #00a8d1;
     border-bottom: 2px solid #00a8d1;
     padding: 10px;
@@ -375,8 +418,6 @@ Image credits: unsplash.com
     .paymentArea:hover {
         border-left: 2px solid #00CCFF;
         border-bottom: 2px solid #00CCFF;
-        
-       
         padding: 10px;
         margin: 4px;
         -webkit-transform: scale(1.05);
@@ -385,35 +426,27 @@ Image credits: unsplash.com
         -ms-transform: scale(1.05);
     }
 
-.visible{
+.visible {
     display: block;
-
 }
 
-.invisible{
+.invisible {
     display: none;
-
 }
 
-.label-header{
-     font-size:x-large;
-                  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-
+.label-header {
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.label-error{
-
-           font-size:x-large;
-                  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+.label-error {
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #e80000;
-
 }
 
-.label-confirm{
-       font-family: Verdana, Geneva, Tahoma, sans-serif;
+.label-confirm {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #0e8500;
     font-size: x-large;
-
 }
