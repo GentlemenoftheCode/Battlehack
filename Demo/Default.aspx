@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Demo._Default" %>
-
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -8,7 +7,7 @@
 
         <div class="row">
 
-
+            <asp:Label ID="LabelOne" runat="server"></asp:Label>
 
             <div class="jumbotron" style="text-align: center">
 
@@ -59,11 +58,14 @@
                 </div>
             </div>
 
+            <div class="row">
+                
+            </div>
             <br />
             <div class="row" id="FeaturedRaffles">
 
                 <div class="row-fluid">
-                    <h2 style="text-align:center">Our Featured Charities: </h2>
+                    <h2 style="text-align: center">Our Featured Charities: </h2>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
                         <img src="/images/american_national_redcross.jpg" alt="American Red Cross Logo" class="featured-logo">
                     </div>

@@ -20,9 +20,11 @@ namespace Demo.Account
                     return;
                 }
                 // Request a redirect to the external login provider
+                //string redirectUrl = ResolveUrl(String.Format(CultureInfo.InvariantCulture, "~/Default", IdentityHelper.ProviderNameKey, provider, ReturnUrl));
+
                 string redirectUrl = ResolveUrl(String.Format(CultureInfo.InvariantCulture, "~/Account/RegisterExternalLogin?{0}={1}&returnUrl={2}", IdentityHelper.ProviderNameKey, provider, ReturnUrl));
                 var properties = new AuthenticationProperties() { RedirectUri = redirectUrl };
-                // Add xsrf verification when linking accounts
+                //Add xsrf verification when linking accounts
                 if (Context.User.Identity.IsAuthenticated)
                 {
                     properties.Dictionary[IdentityHelper.XsrfKey] = Context.User.Identity.GetUserId();
