@@ -74,7 +74,7 @@ namespace Demo
 
             app.UseTwitterAuthentication(
                 consumerKey: "DGdww0YB4GUdYNEUY0CKwHoWm",
-                consumerSecret:  "dBOCKyDfdJYpPi8rVBjGka0OVhXeh8FsBnAQtUMCKeXeZPxwjX"
+                consumerSecret: "dBOCKyDfdJYpPi8rVBjGka0OVhXeh8FsBnAQtUMCKeXeZPxwjX"
 
 
                 );
