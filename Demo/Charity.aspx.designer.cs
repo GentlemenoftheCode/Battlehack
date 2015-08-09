@@ -13,13 +13,22 @@ namespace Demo {
     public partial class Charity {
         
         /// <summary>
-        /// CharityHyperLink control.
+        /// CharityLinkLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CharityHyperLink;
+        protected global::System.Web.UI.WebControls.Label CharityLinkLabel;
+        
+        /// <summary>
+        /// CharityWebsiteLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor CharityWebsiteLink;
         
         /// <summary>
         /// CharityNameLabel control.

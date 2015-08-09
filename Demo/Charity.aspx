@@ -4,9 +4,10 @@
     <div class="col-md-12 page">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" style="text-align:center;">
                 <img src="/images/believe.png" alt="There should be an image here" height="200" width="300" />
-                <asp:HyperLink ID="CharityHyperLink" runat="server" Text="Visit website" NavigateUrl="CharityURL"></asp:HyperLink>
+                <br />
+                <asp:Label ID="CharityLinkLabel" runat="server" CssClass="StaticRaisedLabel"><a id="CharityWebsiteLink" runat="server"> This charities website!</a></asp:Label>
 
             </div>
             <div class="col-md-8">

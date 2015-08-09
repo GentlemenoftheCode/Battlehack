@@ -19,6 +19,7 @@ namespace Demo
             {
                 //Parse the query string
                 charityID = int.Parse(Request.QueryString["ID"]);
+                //int.TryParse(Request.QueryString["ID"], out charityID);
                 if (charityID == null)
                 {
 
@@ -30,7 +31,7 @@ namespace Demo
 
                 //Get the charity being worked with
                 record = db.Charities.Single(p => p.CharityID == charityID);
-
+                
 
 
                 var raffles = (from p in db.Raffles
@@ -39,7 +40,7 @@ namespace Demo
                 if(raffles != null)
                 {
                     //Populate the single raffles labels here
-
+                    populateLabels();
 
                 }
 
@@ -70,7 +71,7 @@ namespace Demo
             CharityNameLabel.Text = Name;
             TotalRaisedLabel.Text = TotalRaised;
             DescriptionLabel.Text = about;
-            CharityURL.Text = imgURL;
+            
 
             //Calculate the days left.
             //REPLACE.
@@ -78,6 +79,14 @@ namespace Demo
             endTime1.Text = DaysTill(endDate);
             endTime2.Text = DaysTill(endDate);
             endTime3.Text = DaysTill(endDate);
+        }
+
+        protected void populateLabels()
+        {
+
+            CharityWebsiteLink.HRef = record.WebsiteURL;
+
+
         }
 
         public static String DaysTill(DateTime endDate)
