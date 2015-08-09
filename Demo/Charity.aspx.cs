@@ -39,7 +39,7 @@ namespace Demo
                 if(raffles != null)
                 {
                     //Populate the single raffles labels here
-
+                    populateLabels();
 
                 }
 
@@ -79,6 +79,14 @@ namespace Demo
             endTime2.Text = DaysTill(endDate);
             endTime3.Text = DaysTill(endDate);
         }
+        protected void populateLabels()
+        {
+
+            CharityWebsiteLink.HRef = record.WebsiteURL;
+
+
+        }
+
 
         public static String DaysTill(DateTime endDate)
         {
