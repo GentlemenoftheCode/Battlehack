@@ -4,10 +4,10 @@
     <div class="col-md-12 page">
 
         <div class="row">
-            <div class="col-md-4" style="text-align:center;">
-                <img src="/images/believe.png" alt="There should be an image here" height="200" width="300" />
+            <div class="col-md-4" style="text-align: center;">
+                <img src="/images/photo.png" alt="There should be an image here" height="200" width="300" />
                 <br />
-                <asp:Label ID="CharityLinkLabel" runat="server" CssClass="StaticRaisedLabel"><a id="CharityWebsiteLink" runat="server"> View this charity's webiste</a></asp:Label>
+                <asp:Label ID="CharityLinkLabel" runat="server" CssClass="StaticRaisedLabel"><a id="CharityWebsiteLink" runat="server">View this charity's webiste</a></asp:Label>
 
             </div>
             <div class="col-md-8">
@@ -15,7 +15,7 @@
                     <asp:Label ID="CharityNameLabel" runat="server" Text="Label" CssClass="NameLabel"></asp:Label>
                 </p>
                 <asp:Label ID="StaticRaisedLabel" runat="server" Text="Raised so far: " CssClass="StaticRaisedLabel"></asp:Label>
-                <asp:Label ID="TotalRaisedLabel" runat="server"  CssClass="RaisedLabel"></asp:Label>
+                <asp:Label ID="TotalRaisedLabel" runat="server" CssClass="RaisedLabel"></asp:Label>
                 <div>
                     <asp:Label ID="DescriptionLabel" runat="server" CssClass="DescLabel"></asp:Label>
                 </div>
@@ -35,18 +35,27 @@
 
                     <span class="pull-right">
                         <asp:Label ID="endTime1" runat="server" Text="soon"></asp:Label></span>
-                    <p class="lead">
-                        <asp:Label ID="raffleTitle1" runat="server" Text="Title"></asp:Label>
-                    </p>
-                    <p>
-                        <asp:Label ID="raffleDis1" runat="server" Text="raffle description"></asp:Label>
-                    </p>
+                    <div class="col-md-6">
+                        <div class="col-md-6">
+                            <asp:Label ID="StaticMoneyRaised" runat="server" Text="Money raised:"></asp:Label><br />
+                            <asp:Label ID="StaticEndLabel" runat="server" Text="Raffle ends in: "></asp:Label><br />
+                            <asp:Label ID="StaticPrizeLabel" runat="server" Text="Current prize amount: "></asp:Label><br />
+                            <asp:Label ID="StaticEnteredlabel" runat="server" Text="People entered in raffle: "></asp:Label><br />
+                        </div>
+                        <div class="col-md-6">
+                            <asp:Label ID="MoneyRaisedLabel" runat="server"></asp:Label><br />
+                            <asp:Label ID="EndLabel" runat="server"></asp:Label><br />
+                            <asp:Label ID="PrizeLabel" runat="server"></asp:Label><br />
+                            <asp:Label ID="EnteredLabel" runat="server"></asp:Label><br />
+                        </div>
+                    </div>  
                 </div>
             </div>
 
             <hr>
-
         </div>
+
+
     </div>
 
 

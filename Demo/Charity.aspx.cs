@@ -60,7 +60,6 @@ namespace Demo
 
 
            
-            //CharityURL.Text = imgURL;
 
             //Calculate the days left.
             //REPLACE.
@@ -80,7 +79,17 @@ namespace Demo
             DateTime endDate = raf.EndTime.Value;
             endTime1.Text = DaysTill(endDate);
             //sets raffle title
-            raffleTitle1.Text = raf.Title;
+            
+            //sets raised dollars
+            MoneyRaisedLabel.Text = "$" + ((int)(raf.RaisedDollars)).ToString();
+            //sets time until end
+            EndLabel.Text = (raf.EndTime - DateTime.Now).ToString();
+            //sets current prize amount
+            PrizeLabel.Text = ((int)(raf.RaisedDollars) / 2).ToString();
+            //sets tickets purchased
+            EnteredLabel.Text = (raf.TicketsEntered).ToString();
+
+            
 
             
 
@@ -97,11 +106,11 @@ namespace Demo
             int numDays = (next - today).Days;
             if (numDays > 0)
             {
-                return "Ends in " + numDays.ToString() + " days";
+                return numDays.ToString() + " days";
             }
             else if (numDays == 0)
             {
-                return "Ends Today (midnight GMT+5)";
+                return "Today (midnight GMT+5)";
             }
             else
                 return "Ended";
