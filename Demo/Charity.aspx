@@ -87,11 +87,11 @@
 
                                 <div class="col-md-8">
 
-                                    <div class="row paymentCalcArea" >
+                                    <div class="row paymentCalcArea">
                                         <div class="col-xs-3">
                                             <asp:Label runat="server" CssClass="raffleStaticLabel">How Many Tickets?</asp:Label>
                                         </div>
-                                        <div class="col-md-4" style="text-align:center">
+                                        <div class="col-md-4" style="text-align: center">
                                             <asp:TextBox runat="server" ID="numTicketsBox" CssClass="form-control"></asp:TextBox>
                                             <br />
                                             <asp:Button runat="server" ID="calcPriceBtn" OnClick="calcPriceBtn_Click" Text="Calculate" CssClass="btn btn-primary" />
@@ -102,7 +102,7 @@
 
                                         </div>
                                         <div class="col-md-2">
-                                            <asp:Label runat="server" CssClass="raffleDynamicLabel"  ID="paymentAmount"></asp:Label>
+                                            <asp:Label runat="server" CssClass="raffleDynamicLabel" ID="paymentAmount"></asp:Label>
 
                                         </div>
 
@@ -110,6 +110,11 @@
 
                                     <br />
                                     <div class="col-sm-12 text-center">
+                                        <form id="checkout" method="post" action="/checkout">
+                                            <div id="payment-form"></div>
+                                            <input type="submit" value="Pay $10">
+                                        </form>
+                                        <asp:HiddenField ID="cTK" runat="server" />
                                     </div>
                                     <br />
                                     <div class="alert alert-danger" role="alert" runat="server" id="alertBox" visible="false">
@@ -180,7 +185,14 @@
 
 
     </script>
-
+     <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+    <script>
+        // We generated a client token generated on the server.
+        var clientToken = document.getElementById("MainContent_cTK").value;
+        braintree.setup(clientToken, "dropin", {
+            container: "payment-form"
+        });
+    </script>
 
 
 

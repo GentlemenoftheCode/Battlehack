@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using Braintree;
 namespace Demo
 {
     public partial class Charity : System.Web.UI.Page
@@ -14,9 +14,23 @@ namespace Demo
         public static Charity record = new Charity();
         protected void Page_Load(object sender, EventArgs e)
         {
+            var gateway = new BraintreeGateway
+            {
+                //Auth with the BrainTree Api
+                Environment = Braintree.Environment.SANDBOX,
+                MerchantId = "78c2hsmmg73s6sdg",
+                PublicKey = "jsyrqbxq2fqv456k",
+                PrivateKey = "004b6691b796db322c57c71343ecf592"
+            };
+
 
             if (!IsPostBack)
             {
+                //Generate Client Token. 
+                var clientToken = gateway.ClientToken.generate();
+                String clientTK = clientToken;
+                cTK.Value = clientToken;
+
                 //Parse the query string
                 charityID = int.Parse(Request.QueryString["ID"]);
                 if (charityID == null)
@@ -55,6 +69,20 @@ namespace Demo
 
                 
                 //workinglabel = ("raffleDis" + i) as Label;
+            }
+            else
+            {
+                //Get the post back var.
+                var nonceFromTheClient = Request.Form["payment_method_nonce"];
+
+                //Create a transition.
+                var request = new TransactionRequest
+                {
+                    Amount = 100.00M,
+                    PaymentMethodNonce = nonceFromTheClient
+                };
+
+                Result<Transaction> result = gateway.Transaction.Sale(request);
             }
 
 
