@@ -8,6 +8,7 @@ using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Demo.Models;
+using Microsoft.Owin.Security.Twitter;
 
 namespace Demo
 {
@@ -51,9 +52,13 @@ namespace Demo
             //    clientId: "",
             //    clientSecret: "");
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+            app.UseTwitterAuthentication(
+               consumerKey: "DGdww0YB4GUdYNEUY0CKwHoWm",
+               consumerSecret: "dBOCKyDfdJYpPi8rVBjGka0OVhXeh8FsBnAQtUMCKeXeZPxwjX"
+
+
+               );
+
 
             //app.UseFacebookAuthentication(
             //   appId: "",

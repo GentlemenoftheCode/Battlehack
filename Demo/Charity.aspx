@@ -24,12 +24,11 @@
 
         <div class="well" id="Roshin">
 
-            <div class="text-right">
+            <%--<div class="text-right">
                 <a class="btn btn-success">Suggest a Charity</a>
-            </div>
+            </div>--%>
 
-            <hr>
-
+          
             <div class="row">
                 <div class="col-md-12">
 

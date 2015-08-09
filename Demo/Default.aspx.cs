@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.Owin.Security.Twitter;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
+
 
 namespace Demo
 {
@@ -11,12 +15,13 @@ namespace Demo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
             if (!IsPostBack)
             {
-                
-                
 
+                LabelOne.Text = Context.User.Identity.GetUserName();
+                
+                
             }
             else
             {
