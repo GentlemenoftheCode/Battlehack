@@ -801,6 +801,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
 
+
   // DROPDOWN PLUGIN DEFINITION
   // ==========================
 
@@ -826,7 +827,6 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     $.fn.dropdown = old
     return this
   }
-
 
   // APPLY TO STANDARD DROPDOWN ELEMENTS
   // ===================================
