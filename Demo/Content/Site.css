@@ -394,3 +394,26 @@ Image credits: unsplash.com
     display: none;
 
 }
+
+.label-header{
+     font-size:x-large;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+.label-error{
+
+           font-size:x-large;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    color: #e80000;
+
+}
+
+.label-confirm{
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #0e8500;
+    font-size: x-large;
+
+}

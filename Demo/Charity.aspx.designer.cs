@@ -58,6 +58,15 @@ namespace Demo {
         protected global::System.Web.UI.WebControls.Label DescriptionLabel;
         
         /// <summary>
+        /// StatusLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StatusLabel;
+        
+        /// <summary>
         /// StaticMoneyRaised control.
         /// </summary>
         /// <remarks>
@@ -173,23 +182,5 @@ namespace Demo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField cTK;
-        
-        /// <summary>
-        /// alertBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertBox;
-        
-        /// <summary>
-        /// inputError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label inputError;
     }
 }

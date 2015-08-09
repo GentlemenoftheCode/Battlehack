@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Braintree;
+using Microsoft.AspNet.Identity;
+using System.Text;
 namespace Demo
 {
     public partial class Charity : System.Web.UI.Page
@@ -12,6 +14,7 @@ namespace Demo
         public static dbDataContext db = new dbDataContext();
         public static int? charityID;
         public static Charity record = new Charity();
+        public static BraintreeGateway gateway = new BraintreeGateway();
         protected void Page_Load(object sender, EventArgs e)
         {
             var gateway = new BraintreeGateway
@@ -49,27 +52,85 @@ namespace Demo
                 //needs more error checking in the future
                 var raffle = record.Raffles[0];
 
-                    //Populate the single raffles labels here
-                    populateLabels(raffle);
+                //Populate the single raffles labels here
+                populateLabels(raffle);
 
             }
             else
             {
                 //Get the post back var.
+                //decimal amount = decimal.Parse(numTicketsBox.Text) * 5;
                 var nonceFromTheClient = Request.Form["payment_method_nonce"];
-
-                //Create a transition.
-                var request = new TransactionRequest
+                if(paymentAmount.Text != string.Empty)
                 {
-                    Amount = 100.00M,
-                    PaymentMethodNonce = nonceFromTheClient
-                };
+                    decimal amount = (decimal.Parse(paymentAmount.Text.TrimStart('$')));
+                    //Create a transition.
+                    var request = new TransactionRequest
+                    {
+                        Amount = amount,
+                        PaymentMethodNonce = nonceFromTheClient
+                    };
 
-                Result<Transaction> result = gateway.Transaction.Sale(request);
+                    Result<Transaction> result = gateway.Transaction.Sale(request);
+                    if (result.IsSuccess() == true)
+                    {
+                        handlePayment(result);
+
+                    }
+                    else
+                    {
+
+                        StatusLabel.Text = "Something went wrong with your payment! Refresh the page and try again?";
+                         StatusLabel.CssClass = "label-error";
+
+                    }
+                }
+                
             }
 
-           
+
         }
+
+        protected void submitPayment()
+        {
+            
+            
+            
+        }
+
+        protected void handlePayment(Result<Transaction> result)
+        {
+            //Obtain some information about the successfull payment
+            //So that we can populate the database with the appropriate 
+            //number of tickets for that person
+            var costPerTicket = 5;
+            var id = result.Target.Id;
+            var amount = result.Target.Amount;
+            var date = result.Target.UpdatedAt;
+            var numTickets = amount / costPerTicket;
+            for(int i = 0; i < numTickets; i++)
+            {
+                Ticket newTicket = new Ticket();
+                newTicket.UserName = Context.User.Identity.GetUserName();
+                //This needs to be changed in the future
+                newTicket.RaffleID = record.Raffles[0].RaffleID;
+                newTicket.TicketPrice = costPerTicket;
+                newTicket.DateSubmitted = (DateTime)date;
+                newTicket.TransactionID = id;
+
+                db.Tickets.InsertOnSubmit(newTicket);
+
+
+            }
+
+            db.SubmitChanges();
+
+            StatusLabel.Text = "Congrats, you're a philanthropist now!";
+            StatusLabel.CssClass = "label-confirm";
+
+        }
+
+
         protected void populateLabels(Raffle raf)
         {
             //populate the picture
@@ -86,20 +147,17 @@ namespace Demo
             DateTime endDate = raf.EndTime.Value;
             raffleEndLabel.Text = DaysTill(endDate);
             //sets raffle title
-            
+
             //sets raised dollars
             MoneyRaisedLabel.Text = "$" + ((int)(raf.RaisedDollars)).ToString();
             //sets time until end
             //TimeSpan tilEnd = (TimeSpan)(raf.EndTime - DateTime.Now);
             //EndLabel.Text = tilEnd.TotalDays.ToString();
-                //sets current prize amount
+            //sets current prize amount
             PrizeLabel.Text = ((int)(raf.RaisedDollars) / 2).ToString();
 
             EnteredLabel.Text = (raf.TicketsEntered).ToString();
 
-            
-
-            
 
         }
 
@@ -134,7 +192,7 @@ namespace Demo
             return dtDateTime;
         }
 
-        
+
 
         /*StringToNum
         Returns an intger if valid; -1 otherwise;
@@ -142,7 +200,7 @@ namespace Demo
         public static int StringToNum(String inputString)
         {
             string numString = "";
-            if(inputString.Length == 0)
+            if (inputString.Length == 0)
             {
                 return -1;
             }
@@ -156,7 +214,7 @@ namespace Demo
                 {
                     return -1;
                 }
-                
+
             }
             return int.Parse(numString);
 
@@ -166,16 +224,18 @@ namespace Demo
         {
             //Validate and get the number.
             int qTix = StringToNum(numTicketsBox.Text);
-            if (qTix == -1)
+            if (qTix <= 0)
             {
-                //Error.
-            }
-            else if (qTix <= 0)
-            {
-                //Error.
+                paymentAmount.Text = "";
+               
+                StatusLabel.Text = "Aww, unfortunately you can't buy no tickets. ";
+               StatusLabel.CssClass = "label-error";
             }
             else
             {
+                StatusLabel.Text = "";
+                StatusLabel.CssClass = "label-confirm";
+
                 //Calculate the number.
                 int Total = qTix * 5;
                 //Show the answer.
