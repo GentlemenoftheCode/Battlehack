@@ -63,8 +63,8 @@ namespace Demo
 
             //Calculate the days left.
             //REPLACE.
-            DateTime endDate = UnixTimeStampToDateTime(1440025689);
-            endTime1.Text = DaysTill(endDate);
+            //DateTime endDate = UnixTimeStampToDateTime(1440025689);
+            //endTime1.Text = DaysTill(endDate);
            
         }
         protected void populateLabels(Raffle raf)
@@ -77,14 +77,14 @@ namespace Demo
             DescriptionLabel.Text = record.Description;
             //sets raffle end time
             DateTime endDate = raf.EndTime.Value;
-            endTime1.Text = DaysTill(endDate);
+            raffleEndLabel.Text = DaysTill(endDate);
             //sets raffle title
             
             //sets raised dollars
             MoneyRaisedLabel.Text = "$" + ((int)(raf.RaisedDollars)).ToString();
             //sets time until end
-            TimeSpan tilEnd = (TimeSpan)(raf.EndTime - DateTime.Now);
-            EndLabel.Text = tilEnd.TotalDays.ToString();
+            //TimeSpan tilEnd = (TimeSpan)(raf.EndTime - DateTime.Now);
+            //EndLabel.Text = tilEnd.TotalDays.ToString();
                 //sets current prize amount
             PrizeLabel.Text = ((int)(raf.RaisedDollars) / 2).ToString();
 
@@ -125,6 +125,55 @@ namespace Demo
             System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
             dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
             return dtDateTime;
+        }
+
+        
+
+        /*StringToNum
+        Returns an intger if valid; -1 otherwise;
+        */
+        public static int StringToNum(String inputString)
+        {
+            string numString = "";
+            if(inputString.Length == 0)
+            {
+                return -1;
+            }
+            foreach (char c in inputString)
+            {
+                if (Char.IsDigit(c))
+                {
+                    numString += c;
+                }
+                else
+                {
+                    return -1;
+                }
+                
+            }
+            return int.Parse(numString);
+
+        }
+
+        protected void calcPriceBtn_Click(object sender, EventArgs e)
+        {
+            //Validate and get the number.
+            int qTix = StringToNum(numTicketsBox.Text);
+            if (qTix == -1)
+            {
+                //Error.
+            }
+            else if (qTix <= 0)
+            {
+                //Error.
+            }
+            else
+            {
+                //Calculate the number.
+                int Total = qTix * 5;
+                //Show the answer.
+                paymentAmount.Text = Total.ToString();
+            }
         }
     }
 }

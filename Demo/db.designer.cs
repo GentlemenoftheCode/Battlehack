@@ -30,15 +30,15 @@ namespace Demo
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertCharity(Charity instance);
-    partial void UpdateCharity(Charity instance);
-    partial void DeleteCharity(Charity instance);
     partial void InsertRaffle(Raffle instance);
     partial void UpdateRaffle(Raffle instance);
     partial void DeleteRaffle(Raffle instance);
     partial void InsertTicket(Ticket instance);
     partial void UpdateTicket(Ticket instance);
     partial void DeleteTicket(Ticket instance);
+    partial void InsertCharity(Charity instance);
+    partial void UpdateCharity(Charity instance);
+    partial void DeleteCharity(Charity instance);
     #endregion
 		
 		public dbDataContext() : 
@@ -71,14 +71,6 @@ namespace Demo
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Charity> Charities
-		{
-			get
-			{
-				return this.GetTable<Charity>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Raffle> Raffles
 		{
 			get
@@ -94,215 +86,13 @@ namespace Demo
 				return this.GetTable<Ticket>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Charity")]
-	public partial class Charity : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _CharityID;
-		
-		private string _Name;
-		
-		private string _Description;
-		
-		private string _WebsiteURL;
-		
-		private System.Data.Linq.Binary _Logo;
-		
-		private string _Tags;
-		
-		private EntitySet<Raffle> _Raffles;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnCharityIDChanging(int value);
-    partial void OnCharityIDChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnDescriptionChanging(string value);
-    partial void OnDescriptionChanged();
-    partial void OnWebsiteURLChanging(string value);
-    partial void OnWebsiteURLChanged();
-    partial void OnLogoChanging(System.Data.Linq.Binary value);
-    partial void OnLogoChanged();
-    partial void OnTagsChanging(string value);
-    partial void OnTagsChanged();
-    #endregion
-		
-		public Charity()
-		{
-			this._Raffles = new EntitySet<Raffle>(new Action<Raffle>(this.attach_Raffles), new Action<Raffle>(this.detach_Raffles));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CharityID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int CharityID
+		public System.Data.Linq.Table<Charity> Charities
 		{
 			get
 			{
-				return this._CharityID;
+				return this.GetTable<Charity>();
 			}
-			set
-			{
-				if ((this._CharityID != value))
-				{
-					this.OnCharityIDChanging(value);
-					this.SendPropertyChanging();
-					this._CharityID = value;
-					this.SendPropertyChanged("CharityID");
-					this.OnCharityIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
-		public string Description
-		{
-			get
-			{
-				return this._Description;
-			}
-			set
-			{
-				if ((this._Description != value))
-				{
-					this.OnDescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._Description = value;
-					this.SendPropertyChanged("Description");
-					this.OnDescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WebsiteURL", DbType="NVarChar(MAX)")]
-		public string WebsiteURL
-		{
-			get
-			{
-				return this._WebsiteURL;
-			}
-			set
-			{
-				if ((this._WebsiteURL != value))
-				{
-					this.OnWebsiteURLChanging(value);
-					this.SendPropertyChanging();
-					this._WebsiteURL = value;
-					this.SendPropertyChanged("WebsiteURL");
-					this.OnWebsiteURLChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Logo", DbType="Image", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary Logo
-		{
-			get
-			{
-				return this._Logo;
-			}
-			set
-			{
-				if ((this._Logo != value))
-				{
-					this.OnLogoChanging(value);
-					this.SendPropertyChanging();
-					this._Logo = value;
-					this.SendPropertyChanged("Logo");
-					this.OnLogoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tags", DbType="NVarChar(MAX)")]
-		public string Tags
-		{
-			get
-			{
-				return this._Tags;
-			}
-			set
-			{
-				if ((this._Tags != value))
-				{
-					this.OnTagsChanging(value);
-					this.SendPropertyChanging();
-					this._Tags = value;
-					this.SendPropertyChanged("Tags");
-					this.OnTagsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Charity_Raffle", Storage="_Raffles", ThisKey="CharityID", OtherKey="CharityID")]
-		public EntitySet<Raffle> Raffles
-		{
-			get
-			{
-				return this._Raffles;
-			}
-			set
-			{
-				this._Raffles.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Raffles(Raffle entity)
-		{
-			this.SendPropertyChanging();
-			entity.Charity = this;
-		}
-		
-		private void detach_Raffles(Raffle entity)
-		{
-			this.SendPropertyChanging();
-			entity.Charity = null;
 		}
 	}
 	
@@ -825,6 +615,216 @@ namespace Demo
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Charity")]
+	public partial class Charity : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _CharityID;
+		
+		private string _Name;
+		
+		private string _Description;
+		
+		private string _WebsiteURL;
+		
+		private string _Tags;
+		
+		private string _ImageLink;
+		
+		private EntitySet<Raffle> _Raffles;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCharityIDChanging(int value);
+    partial void OnCharityIDChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnWebsiteURLChanging(string value);
+    partial void OnWebsiteURLChanged();
+    partial void OnTagsChanging(string value);
+    partial void OnTagsChanged();
+    partial void OnImageLinkChanging(string value);
+    partial void OnImageLinkChanged();
+    #endregion
+		
+		public Charity()
+		{
+			this._Raffles = new EntitySet<Raffle>(new Action<Raffle>(this.attach_Raffles), new Action<Raffle>(this.detach_Raffles));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CharityID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int CharityID
+		{
+			get
+			{
+				return this._CharityID;
+			}
+			set
+			{
+				if ((this._CharityID != value))
+				{
+					this.OnCharityIDChanging(value);
+					this.SendPropertyChanging();
+					this._CharityID = value;
+					this.SendPropertyChanged("CharityID");
+					this.OnCharityIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WebsiteURL", DbType="NVarChar(MAX)")]
+		public string WebsiteURL
+		{
+			get
+			{
+				return this._WebsiteURL;
+			}
+			set
+			{
+				if ((this._WebsiteURL != value))
+				{
+					this.OnWebsiteURLChanging(value);
+					this.SendPropertyChanging();
+					this._WebsiteURL = value;
+					this.SendPropertyChanged("WebsiteURL");
+					this.OnWebsiteURLChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tags", DbType="NVarChar(MAX)")]
+		public string Tags
+		{
+			get
+			{
+				return this._Tags;
+			}
+			set
+			{
+				if ((this._Tags != value))
+				{
+					this.OnTagsChanging(value);
+					this.SendPropertyChanging();
+					this._Tags = value;
+					this.SendPropertyChanged("Tags");
+					this.OnTagsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageLink", DbType="NVarChar(50)")]
+		public string ImageLink
+		{
+			get
+			{
+				return this._ImageLink;
+			}
+			set
+			{
+				if ((this._ImageLink != value))
+				{
+					this.OnImageLinkChanging(value);
+					this.SendPropertyChanging();
+					this._ImageLink = value;
+					this.SendPropertyChanged("ImageLink");
+					this.OnImageLinkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Charity_Raffle", Storage="_Raffles", ThisKey="CharityID", OtherKey="CharityID")]
+		public EntitySet<Raffle> Raffles
+		{
+			get
+			{
+				return this._Raffles;
+			}
+			set
+			{
+				this._Raffles.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Raffles(Raffle entity)
+		{
+			this.SendPropertyChanging();
+			entity.Charity = this;
+		}
+		
+		private void detach_Raffles(Raffle entity)
+		{
+			this.SendPropertyChanging();
+			entity.Charity = null;
 		}
 	}
 }
