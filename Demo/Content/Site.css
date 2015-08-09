@@ -230,10 +230,16 @@ Image credits: unsplash.com
 /********************************/
 /*          Media Queries       */
 /********************************/
-@media screen and (min-width: 980px){
+@media screen and (min-width: 992px){
     .hero { width: 980px; }    
 }
-@media screen and (max-width: 640px){
-    .hero h1 { font-size: 4em; }   
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    .hero h3{
+        font-size: .75em;
+    }
+}     
 
 /* End Carousel CSS */
