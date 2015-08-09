@@ -5,9 +5,7 @@
 
     <div class="col-xs-12">
 
-        <div class="row">
-
-            <asp:Label ID="LabelOne" runat="server"></asp:Label>
+        
 
             <div class="jumbotron" style="text-align: center">
 
@@ -91,7 +89,5 @@
 
             </div>
 
-
-
-        </div>
+</div>
 </asp:Content>
