@@ -67,22 +67,22 @@
                 <div class="row-fluid">
                     <h2 style="text-align: center">Our Featured Charities: </h2>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                        <a href="/Charity?ID=1000"><img src="/images/american_national_redcross.jpg" alt="American Red Cross Logo" class="featured-logo"></a>
+                        <a href="/Charity?ID=1000"><img src="/images/american_national_redcross.jpg" alt="American Red Cross Logo" class="featured-logo img-rounded"></a>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                        <img src="/images/feeding-america.jpg" alt="Feeding America Logo" class="featured-logo">
+                        <img src="/images/feeding-america.jpg" alt="Feeding America Logo" class="featured-logo img-rounded">
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                        <img src="/images/salvation-army.jpg" alt="Salvation Army Logo" class="featured-logo">
+                        <img src="/images/salvation-army.jpg" alt="Salvation Army Logo" class="featured-logo img-rounded">
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                        <img src="/images/task-force-for-global-health.jpg" alt="Task Force for Global Health Logo" class="featured-logo">
+                        <img src="/images/task-force-for-global-health.jpg" alt="Task Force for Global Health Logo" class="featured-logo img-rounded">
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                        <img src="/images/united-way.jpg" alt="United Way Logo" class="featured-logo">
+                        <img src="/images/united-way.jpg" alt="United Way Logo" class="featured-logo img-rounded">
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                        <img src="/images/goodwill-industries.jpg" alt="Goodwill Industries Intentational Logo" class="featured-logo">
+                        <img src="/images/goodwill-industries.jpg" alt="Goodwill Industries Intentational Logo" class="featured-logo img-rounded">
                     </div>
                 </div>
 
