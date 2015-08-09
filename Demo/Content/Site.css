@@ -121,10 +121,10 @@ Image credits: unsplash.com
 /********************************/
 .fade-carousel {
     position: relative;
-    height: 100vh;
+    height: 75vh;
 }
 .fade-carousel .carousel-inner .item {
-    height: 100vh;
+    height: 75vh;
 }
 .fade-carousel .carousel-indicators > li {
     margin: 0 2px;
@@ -218,13 +218,13 @@ Image credits: unsplash.com
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(https://unsplash.it/1400/299?random); 
+  background-image: url(https://unsplash.it/100/100?random); 
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(https://unsplash.it/1399/300?random);
+  background-image: url(https://unsplash.it/100/100?random);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(https://unsplash.it/1400/299?random);
+  background-image: url(https://unsplash.it/100/100?random);
 }
 
 /********************************/
