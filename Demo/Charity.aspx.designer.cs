@@ -76,21 +76,75 @@ namespace Demo {
         protected global::System.Web.UI.WebControls.Label endTime1;
         
         /// <summary>
-        /// raffleTitle1 control.
+        /// StaticMoneyRaised control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label raffleTitle1;
+        protected global::System.Web.UI.WebControls.Label StaticMoneyRaised;
         
         /// <summary>
-        /// raffleDis1 control.
+        /// StaticEndLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label raffleDis1;
+        protected global::System.Web.UI.WebControls.Label StaticEndLabel;
+        
+        /// <summary>
+        /// StaticPrizeLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StaticPrizeLabel;
+        
+        /// <summary>
+        /// StaticEnteredlabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StaticEnteredlabel;
+        
+        /// <summary>
+        /// MoneyRaisedLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MoneyRaisedLabel;
+        
+        /// <summary>
+        /// EndLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EndLabel;
+        
+        /// <summary>
+        /// PrizeLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PrizeLabel;
+        
+        /// <summary>
+        /// EnteredLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EnteredLabel;
     }
 }

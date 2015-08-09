@@ -22,7 +22,18 @@
       <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Raffle_Ticket" Member="Tickets" ThisKey="RaffleID" OtherKey="RaffleID" Type="Ticket" />
       <Association Name="Charity_Raffle" Member="Charity" ThisKey="CharityID" OtherKey="CharityID" Type="Charity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ticket" Member="Tickets">
+    <Type Name="Ticket">
+      <Column Name="TicketID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="RaffleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TicketPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Valid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Raffle_Ticket" Member="Raffle" ThisKey="RaffleID" OtherKey="RaffleID" Type="Raffle" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
