@@ -7,7 +7,7 @@
             <div class="col-md-4" style="text-align:center;">
                 <img src="/images/believe.png" alt="There should be an image here" height="200" width="300" />
                 <br />
-                <asp:Label ID="CharityLinkLabel" runat="server" CssClass="StaticRaisedLabel"><a id="CharityWebsiteLink" runat="server"> This charities website!</a></asp:Label>
+                <asp:Label ID="CharityLinkLabel" runat="server" CssClass="StaticRaisedLabel"><a id="CharityWebsiteLink" runat="server"> View this charity's webiste</a></asp:Label>
 
             </div>
             <div class="col-md-8">
