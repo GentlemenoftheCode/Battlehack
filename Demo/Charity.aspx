@@ -6,8 +6,7 @@
         <div class="panel panel-default ">
             <div class="panel-body charity-panel-body">
                 <div class="col-md-4" style="text-align: center;">
-                    <img src="/images/photo.jpg" alt="There should be an image here" class="regular-logo " />
-
+                    <asp:Image runat="server" ID="imageLogo" CssClass="regular-logo" />
                     <asp:Label ID="CharityLinkLabel" runat="server" CssClass="btn btn-link"><a id="CharityWebsiteLink" runat="server">View this charities website</a></asp:Label>
 
                 </div>

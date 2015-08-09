@@ -69,6 +69,10 @@ namespace Demo
         }
         protected void populateLabels(Raffle raf)
         {
+            //populate the picture
+            imageLogo.ImageUrl = record.ImageLink;
+
+
             //sets correct website URL
             CharityWebsiteLink.HRef = record.WebsiteURL;
             //sets charity title
