@@ -37,26 +37,28 @@
                     { 'data': 'Name' },
                     { 'data': 'Description' },
                     { 'data': 'Tags' },
-                    { 'data': 'null' }
+                    { 'data': 'CharityID' }
 
                 ],
-                "columnDefs": [{
-                    "targets": -1,
-                    "data": null,
-                    "defaultContent": "<button>Click!</button>"
-                }]
+                "aoColumnDefs": [
+                    {
+                        "aTargets": [3],
+                        "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                            var b = $('<button class="btn btn-link">View More</button>');
+                            b.button();
+                            b.on('click', function () {
+                                location.href = ("~/Charity.aspx?ID=" + oData.CharityID);
+                                
+                            });
+                            $(nTd).empty();
+                            $(nTd).prepend(b);
+                        }
+                    } ]
             }
             );
-            $('#example tbody').on('click', 'button', function () {
-                var data = table.row($(this).parents('tr')).data();
-                alert(data[0] + "'s id is: ");
-            });
+            
 
-            //$('#example tbody').on('click', 'button', function () {
-            //    var data = table.row($(this).parents('tr')).data();
-            //    alert("Hello");
-            //    //alert(data.Name + "'s id is: " + data.CharityID);
-            //});
+          
 
         });
         
