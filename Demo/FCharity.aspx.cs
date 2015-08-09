@@ -17,6 +17,9 @@ namespace Demo
             endTime1.Text = DaysTill(endDate);
             endTime2.Text = DaysTill(endDate);
             endTime3.Text = DaysTill(endDate);
+
+            Raffle tix = new Raffle();
+            int num = tix.CharityID;
         }
 
         public static String DaysTill(DateTime endDate)

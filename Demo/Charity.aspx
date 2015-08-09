@@ -6,6 +6,7 @@
         <div class="row">
             <div class="col-md-4">
                 <img src="/images/believe.png" alt="There should be an image here" height="200" width="300" />
+                <asp:HyperLink ID="CharityHyperLink" runat="server" Text="Visit website" NavigateUrl="CharityURL"></asp:HyperLink>
 
             </div>
             <div class="col-md-8">
