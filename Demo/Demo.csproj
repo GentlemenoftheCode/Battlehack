@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.2.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.15.1.2.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Braintree-2.46.0, Version=2.46.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Braintree.2.46.0\lib\Braintree-2.46.0.dll</HintPath>
       <Private>True</Private>

@@ -7,49 +7,59 @@ using System.Web.UI.WebControls;
 
 namespace Demo
 {
+    
     public partial class FCharity : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Calculate the days left.
-            //REPLACE.
-            DateTime endDate = UnixTimeStampToDateTime(1440025689);
-            endTime1.Text = DaysTill(endDate);
-            endTime2.Text = DaysTill(endDate);
-            endTime3.Text = DaysTill(endDate);
 
-            Raffle tix = new Raffle();
-            int num = tix.CharityID;
+            //alertBox.Style("visible", "false");
         }
 
-        public static String DaysTill(DateTime endDate)
+        public void Button_Click1()
         {
-            DateTime today = DateTime.Today;
-            DateTime next = endDate.AddYears(today.Year - endDate.Year);
-            if (next < today)
-                next = next.AddYears(1);
-
-            int numDays = (next - today).Days;
-            if (numDays > 0)
+            //Validate and get the number.
+            int qTix = StringToNum(quantity.Value);
+            if (qTix == -1)
             {
-                return "Ends in " + numDays.ToString() + " days";
+                //Error.
             }
-            else if (numDays == 0)
+            else if(qTix <= 0)
             {
-                return "Ends Today (midnight GMT+5)";
+                //Error.
             }
             else
-                return "Ended";
+            {
+                //Calculate the number.
+                int Total = qTix * 5;
+                //Show the answer.
+            }
 
+            
         }
 
-        // Creates a DateTime from a timestamp.
-        public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
+        /*StringToNum
+        Returns an intger if valid; -1 otherwise;
+        */
+        public static int StringToNum(String inputString)
         {
-            // Unix timestamp is seconds past epoch
-            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
-            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
-            return dtDateTime;
+            string numString = "";
+            foreach (char c in inputString)
+            {
+                if (Char.IsDigit(c) )
+                {
+                    numString += c;
+                }
+                else{
+                    return -1;
+                }
+                return int.Parse(numString); ;
+            }
+
+            return 0;
+
         }
+
     }
 }
