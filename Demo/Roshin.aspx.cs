@@ -36,7 +36,9 @@ namespace Demo
                 };
 
                 Result<Transaction> result = gateway.Transaction.Sale(request);
-                
+                var id = result.Transaction.Id;
+                var amount = result.Transaction.Amount;
+                var date = result.Transaction.UpdatedAt;
             }
         }
 

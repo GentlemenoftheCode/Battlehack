@@ -28,7 +28,7 @@
                             <div class="slide-1"></div>
                             <div class="hero">
                                 <hgroup>
-                                    <h1>Purchase a raffle ticket!</h1>
+                                    <h1>Purchase raffle tickets!</h1>
                                     <h3>Don't worry; we donate all profits to the host-charity</h3>
                                 </hgroup>
                                 <asp:Button ID="ButtonSlide1" runat="server" CssClass="btn btn-hero btn-lg" Text="Browse Raffles" PostBackUrl="~/FindCharity.aspx" />
@@ -63,7 +63,9 @@
             </div>
             <br />
             <div class="row" id="FeaturedRaffles">
-
+                <h1 style="text-align: center">We connect people to charities. Each raffle guarantees 50% of the winnings to your favorite charity,
+                    and each ticket gives you a chance of winning the rest!
+                </h1>
                 <div class="row-fluid">
                     <h2 style="text-align: center">Our Featured Charities: </h2>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
