@@ -21,7 +21,7 @@ namespace Demo
             if (!IsPostBack)
             {
 
-                LabelOne.Text = Context.User.Identity.GetUserName();
+                //LabelOne.Text = Context.User.Identity.GetUserName();
                 
                 
             }
