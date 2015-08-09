@@ -29,39 +29,33 @@
                             <div class="slide-1"></div>
                             <div class="hero">
                                 <hgroup>
-                                    <h1>We are creative</h1>
-                                    <h3>Get start your next awesome project</h3>
+                                    <h1>Purchase a raffle ticket!</h1>
+                                    <h3>Don't worry; we donate all profits to the host-charity</h3>
                                 </hgroup>
-                                <button class="btn btn-hero btn-lg" role="button">See all features</button>
+                                <asp:Button ID="ButtonSlide1" runat="server" CssClass="btn btn-hero btn-lg" Text="Browse Raffles" PostBackUrl="~/FindCharity.aspx" />
                             </div>
                         </div>
                         <div class="item slides">
                             <div class="slide-2"></div>
                             <div class="hero">
                                 <hgroup>
-                                    <h1>We are smart</h1>
-                                    <h3>Get start your next awesome project</h3>
+                                    <h1>Suggest a Charity!</h1>
+                                    <h3>We're always looking for new non-profits that could benefit from using our platform</h3>
                                 </hgroup>
-                                <button class="btn btn-hero btn-lg" role="button">See all features</button>
+                                <asp:Button ID="ButtonSlide2" runat="server" CssClass="btn btn-hero btn-lg" Text="Suggest a Charity" PostBackUrl="~/FindCharity.aspx" />
                             </div>
                         </div>
                         <div class="item slides">
                             <div class="slide-3"></div>
                             <div class="hero">
                                 <hgroup>
-                                    <h1>We are amazing</h1>
-                                    <h3>Get start your next awesome project</h3>
+                                    <h1>Browse Non-Profits!</h1>
+                                    <h3>These charities count on you, and so do the people they help</h3>
                                 </hgroup>
-                                <button class="btn btn-hero btn-lg" role="button">See all features</button>
+                                <asp:Button ID="ButtonSlide3" runat="server" CssClass="btn btn-hero btn-lg" Text="Browse Charities" PostBackUrl="~/FindCharity.aspx" />
                             </div>
                         </div>
                     </div>
-
-
-                    <h3>Join a Charity Raffle Online</h3>
-                    <h5>Join a raffle, get a chance to win cash money while helping a charity.</h5>
-                    <asp:Button ID="getStartedButton" runat="server" CssClass="btn btn-primary" Text="Get Started!" PostBackUrl="~/FindCharity.aspx" />
-
                 </div>
             </div>
 
@@ -69,6 +63,7 @@
             <div class="row" id="FeaturedRaffles">
 
                 <div class="row-fluid">
+                    <h2 style="text-align:center">Our Featured Charities: </h2>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
                         <img src="/images/american_national_redcross.jpg" alt="American Red Cross Logo" class="featured-logo">
                     </div>
