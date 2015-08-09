@@ -4,20 +4,19 @@
     <div class="col-md-12 page">
 
         <div class="row">
+            <div class="col-md-6" >
+                 <img src="/images/believe.png" alt="There should be an image here" height="200" width="300" />
+
+            </div>
             <div class="col-md-6">
-                <div style="text-align: left;">
-                    <p>
+                <p>
                         <asp:Label ID="CharityNameLabel" runat="server" Text="Label" CssClass="NameLabel"></asp:Label>
                     </p>
                     <asp:Label ID="StaticRaisedLabel" runat="server" Text="Raised so far: " CssClass="StaticRaisedLabel"></asp:Label>
                     <asp:Label ID="TotalRaisedLabel" runat="server" Text="Label" CssClass="RaisedLabel"></asp:Label>
-                </div>
                 <div>
                     <asp:Label ID="DescriptionLabel" runat="server" CssClass="DescLabel"></asp:Label>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <img src="/images/believe.png" alt="There should be an image here" height="200" width="300" />
             </div>
         </div>
     </div>
