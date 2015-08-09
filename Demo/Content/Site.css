@@ -157,7 +157,7 @@ Image credits: unsplash.com
               transform: translate3d(-50%,-50%,0);
 }
 .hero h1 {
-    font-size: 6em;    
+    font-size: 4em;    
     font-weight: bold;
     margin: 0;
     padding: 0;
@@ -218,13 +218,13 @@ Image credits: unsplash.com
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(https://unsplash.it/100/100?random); 
+  background-image: url(https://unsplash.it/1200/500?random); 
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(https://unsplash.it/100/100?random);
+  background-image: url(https://unsplash.it/1199/500?random);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(https://unsplash.it/100/100?random);
+  background-image: url(https://unsplash.it/1200/499?random);
 }
 
 /********************************/
