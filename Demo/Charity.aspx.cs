@@ -83,10 +83,11 @@ namespace Demo
             //sets raised dollars
             MoneyRaisedLabel.Text = "$" + ((int)(raf.RaisedDollars)).ToString();
             //sets time until end
-            EndLabel.Text = (raf.EndTime - DateTime.Now).ToString();
-            //sets current prize amount
+            TimeSpan tilEnd = (TimeSpan)(raf.EndTime - DateTime.Now);
+            EndLabel.Text = tilEnd.TotalDays.ToString();
+                //sets current prize amount
             PrizeLabel.Text = ((int)(raf.RaisedDollars) / 2).ToString();
-            //sets tickets purchased
+
             EnteredLabel.Text = (raf.TicketsEntered).ToString();
 
             
