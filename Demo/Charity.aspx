@@ -38,7 +38,6 @@
                             <div class="panel-body">
 
 
-                                <span class="pull-right"></span>
                                 <div class="col-md-4">
                                     <div class="row raffleSection">
                                         <div class="col-md-5">
@@ -88,21 +87,22 @@
 
                                 <div class="col-md-8">
 
-                                    <div class="row" style="border: 1px solid #ffd800; height: auto">
-                                        <div class="col-xs-2">
-                                            <asp:Label runat="server">How Many Tickets?</asp:Label>
+                                    <div class="row paymentCalcArea" >
+                                        <div class="col-xs-3">
+                                            <asp:Label runat="server" CssClass="raffleStaticLabel">How Many Tickets?</asp:Label>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-4" style="text-align:center">
                                             <asp:TextBox runat="server" ID="numTicketsBox" CssClass="form-control"></asp:TextBox>
+                                            <br />
                                             <asp:Button runat="server" ID="calcPriceBtn" OnClick="calcPriceBtn_Click" Text="Calculate" CssClass="btn btn-primary" />
 
                                         </div>
-                                        <div class="col-md-2">
-                                            <asp:Label runat="server"> x $5.00 = </asp:Label>
+                                        <div class="col-md-3">
+                                            <asp:Label runat="server" CssClass="raffleStaticLabel"> x $5.00 = </asp:Label>
 
                                         </div>
-                                        <div class="col-md-1">
-                                            <asp:Label runat="server" ID="paymentAmount"></asp:Label>
+                                        <div class="col-md-2">
+                                            <asp:Label runat="server" CssClass="raffleDynamicLabel"  ID="paymentAmount"></asp:Label>
 
                                         </div>
 

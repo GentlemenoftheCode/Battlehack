@@ -289,27 +289,27 @@ Image credits: unsplash.com
     -ms-transition: all .4s ease-in-out;
 }
 
-    .raffleSection .raffleStaticLabel {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: #1abc9c;
-        font-size: large;
-    }
+.raffleStaticLabel {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #1abc9c;
+    font-size: large;
+}
 
-    .raffleSection .raffleDynamicLabel {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: x-large;
-        color: black;
-        padding-bottom: 15px;
-    }
+.raffleDynamicLabel {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    color: black;
+    padding-bottom: 15px;
+}
 
-    .raffleSection:hover {
-        border-left: 2px solid #00CCFF;
-        border-bottom: 2px solid #00CCFF;
-        -webkit-transform: scale(1.05);
-        -moz-transform: scale(1.05);
-        -o-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-    }
+.raffleSection:hover {
+    border-left: 2px solid #00CCFF;
+    border-bottom: 2px solid #00CCFF;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+}
 
 
 
@@ -332,9 +332,31 @@ Image credits: unsplash.com
 }
 
 .DescLabel {
-
     font-style: italic;
     color: rgba(0,0,0,.75);
     font-size: large;
-
 }
+
+.paymentCalcArea {
+    border-left: 2px solid #00a8d1;
+    border-right: 2px solid #00a8d1;
+    padding: 10px;
+    margin: 4px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+}
+
+    .paymentCalcArea:hover {
+        border-top: 2px solid #00CCFF;
+        border-bottom: 2px solid #00CCFF;
+        border-left: none;
+        border-right: none;
+        padding: 10px;
+        margin: 4px;
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+    }

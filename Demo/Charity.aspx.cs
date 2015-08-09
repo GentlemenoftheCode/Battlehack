@@ -176,7 +176,7 @@ namespace Demo
                 //Calculate the number.
                 int Total = qTix * 5;
                 //Show the answer.
-                paymentAmount.Text = Total.ToString();
+                paymentAmount.Text = "$" + Total.ToString();
             }
         }
     }
