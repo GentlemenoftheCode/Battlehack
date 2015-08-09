@@ -33,6 +33,7 @@ namespace Demo
             {
                 //Calculate the number.
                 int Total = qTix * 5;
+                TotalText.Text = Total.ToString();
                 //Show the answer.
             }
 
@@ -54,10 +55,9 @@ namespace Demo
                 else{
                     return -1;
                 }
-                return int.Parse(numString); ;
+                
             }
-
-            return 0;
+            return int.Parse(numString); ;
 
         }
 
