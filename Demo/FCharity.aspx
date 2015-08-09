@@ -33,7 +33,7 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                            <span class="pull-right">Ends <asp:Label ID="endTime1" runat="server" Text="soon"></asp:Label></span>
+                            <span class="pull-right"><asp:Label ID="endTime1" runat="server" Text="soon"></asp:Label></span>
                             <p class="lead">
                                 <asp:Label ID="raffleTitle1" runat="server" Text="Title"></asp:Label>
                             </p>
@@ -48,7 +48,7 @@
                      <div class="row">
                         <div class="col-md-12">
 
-                            <span class="pull-right">Ends <asp:Label ID="endTime2" runat="server" Text="soon"></asp:Label></span>
+                            <span class="pull-right"><asp:Label ID="endTime2" runat="server" Text="soon"></asp:Label></span>
                             <p class="lead">
                                 <asp:Label ID="raffleTitle2" runat="server" Text="Title"></asp:Label>
                             </p>
@@ -63,8 +63,8 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                            <span class="pull-right">Ends 
-                                <asp:Label ID="endTimethree" runat="server" Text="soon"></asp:Label>
+                            <span class="pull-right"> 
+                                <asp:Label ID="endTime3" runat="server" Text="soon"></asp:Label>
                             </span>
                             <p class="lead">
                                 <asp:Label ID="raffleTitle3" runat="server" Text="Title"></asp:Label>

@@ -94,13 +94,13 @@ namespace Demo {
         protected global::System.Web.UI.WebControls.Label raffleDis2;
         
         /// <summary>
-        /// endTimethree control.
+        /// endTime3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label endTimethree;
+        protected global::System.Web.UI.WebControls.Label endTime3;
         
         /// <summary>
         /// raffleTitle3 control.
