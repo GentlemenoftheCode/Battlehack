@@ -47,8 +47,9 @@
                             var b = $('<button class="btn btn-link">View More</button>');
                             b.button();
                             b.on('click', function () {
-                                location.href = ("~/Charity.aspx?ID=" + oData.CharityID);
-                                
+                                //alert(oData.CharityID);
+                                location.href = ("/Charity.aspx?ID=" + oData.CharityID);
+                                return false;
                             });
                             $(nTd).empty();
                             $(nTd).prepend(b);
