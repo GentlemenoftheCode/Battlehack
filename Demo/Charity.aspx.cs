@@ -52,23 +52,6 @@ namespace Demo
                     //Populate the single raffles labels here
                     populateLabels(raffle);
 
-
-
-                //Label workinglabel = new Label();
-                //int i = 1;
-                //foreach (var raff in raffles)
-                //{
-                //    workinglabel = cph.FindControl("raffleTitle" + i) as Label;
-                   
-
-
-
-                //    i++;
-                //}
-                
-
-                
-                //workinglabel = ("raffleDis" + i) as Label;
             }
             else
             {
@@ -85,14 +68,6 @@ namespace Demo
                 Result<Transaction> result = gateway.Transaction.Sale(request);
             }
 
-
-
-           
-
-            //Calculate the days left.
-            //REPLACE.
-            //DateTime endDate = UnixTimeStampToDateTime(1440025689);
-            //endTime1.Text = DaysTill(endDate);
            
         }
         protected void populateLabels(Raffle raf)

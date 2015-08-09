@@ -339,7 +339,7 @@ Image credits: unsplash.com
 
 .paymentCalcArea {
     border-left: 2px solid #00a8d1;
-    border-right: 2px solid #00a8d1;
+    border-bottom: 2px solid #00a8d1;
     padding: 10px;
     margin: 4px;
     -webkit-transition: all .4s ease-in-out;
@@ -349,10 +349,10 @@ Image credits: unsplash.com
 }
 
     .paymentCalcArea:hover {
-        border-top: 2px solid #00CCFF;
+        border-left: 2px solid #00CCFF;
         border-bottom: 2px solid #00CCFF;
-        border-left: none;
-        border-right: none;
+        
+       
         padding: 10px;
         margin: 4px;
         -webkit-transform: scale(1.05);
@@ -360,3 +360,37 @@ Image credits: unsplash.com
         -o-transform: scale(1.05);
         -ms-transform: scale(1.05);
     }
+
+    .paymentArea {
+    border-left: 2px solid #00a8d1;
+    border-bottom: 2px solid #00a8d1;
+    padding: 10px;
+    margin: 4px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+}
+
+    .paymentArea:hover {
+        border-left: 2px solid #00CCFF;
+        border-bottom: 2px solid #00CCFF;
+        
+       
+        padding: 10px;
+        margin: 4px;
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+    }
+
+.visible{
+    display: block;
+
+}
+
+.invisible{
+    display: none;
+
+}
