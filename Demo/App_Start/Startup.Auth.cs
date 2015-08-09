@@ -52,28 +52,32 @@ namespace Demo
             //app.UseMicrosoftAccountAuthentication(
             //    clientId: "",
             //    clientSecret: "");
-            var options = new TwitterAuthenticationOptions
-            {
-                ConsumerKey = "DGdww0YB4GUdYNEUY0CKwHoWm",
-                ConsumerSecret = "dBOCKyDfdJYpPi8rVBjGka0OVhXeh8FsBnAQtUMCKeXeZPxwjX",
-                Provider = new TwitterAuthenticationProvider
-                {
-                    OnAuthenticated = context =>
-                    {
-                        context.Identity.AddClaim(new Claim("urn:token:twitter", context.AccessToken));
+            //var options = new TwitterAuthenticationOptions
+            //{
+            //    ConsumerKey = "DGdww0YB4GUdYNEUY0CKwHoWm",
+            //    ConsumerSecret = "dBOCKyDfdJYpPi8rVBjGka0OVhXeh8FsBnAQtUMCKeXeZPxwjX",
+            //    Provider = new TwitterAuthenticationProvider
+            //    {
+            //        OnAuthenticated = context =>
+            //        {
+            //            context.Identity.AddClaim(new Claim("urn:token:twitter", context.AccessToken));
 
-                        return Task.FromResult(true);
-                    }
+            //            return Task.FromResult(true);
+            //        }
 
 
-                }
+            //    }
 
-            };
+            //};
 
-            app.UseTwitterAuthentication(options);
+            //app.UseTwitterAuthentication(options);
 
-     
+            app.UseTwitterAuthentication(
+                consumerKey: "DGdww0YB4GUdYNEUY0CKwHoWm",
+                consumerSecret:  "dBOCKyDfdJYpPi8rVBjGka0OVhXeh8FsBnAQtUMCKeXeZPxwjX"
 
+
+                );
             //app.UseFacebookAuthentication(
             //   appId: "",
             //   appSecret: "");
