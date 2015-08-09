@@ -2,7 +2,6 @@
 body {
     padding-top: 90px;
     padding-bottom: 20px;
-   
 }
 
 /* Wrapping element */
@@ -64,46 +63,64 @@ input[type="select"] {
 }
 
 .featured-logo {
-    width: 100%;
-    height: 100%;
-    padding:3px;
+    width: 80%;
+    height: 80%;
+    padding: 3px;
+    margin-bottom: 20px;
     border-bottom: 3px solid #F38630;
-    
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
 }
 
-.featured-logo:hover {
-    border-bottom: 3px solid #00CCFF;
+    .featured-logo:hover {
+        border-bottom: 3px solid #00CCFF;
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        z-index: 100000;
+    }
+
+.regular-logo {
+    width: 80%;
+    height: 80%;
+    padding: 3px;
+    margin-bottom: 20px;
+    /*border-bottom: 3px solid #F38630;*/
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
 }
 
-.NameLabel{
+    .regular-logo:hover {
+        /*border-bottom: 3px solid #00CCFF;*/
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        z-index: 100000;
+    }
 
-    font-weight: bold;
-    font-size: 200%;
-
-}
-
-.DescLabel{
 
 
 
-}
-
-.StaticRaisedLabel{
-
+.StaticRaisedLabel {
     font-weight: bold;
     font-size: 125%;
 }
 
-.RaisedLabel{
+.RaisedLabel {
     font-weight: bold;
     font-size: 150%;
-
 }
 
 .navbarElement {
-  position: relative;
-  top: 50%;
-  transform: translateY(+50%);
+    position: relative;
+    top: 50%;
+    transform: translateY(+50%);
 }
 
 
@@ -123,20 +140,23 @@ Image credits: unsplash.com
     position: relative;
     height: 75vh;
 }
-.fade-carousel .carousel-inner .item {
-    height: 75vh;
-}
-.fade-carousel .carousel-indicators > li {
-    margin: 0 2px;
-    background-color: #f39c12;
-    border-color: #f39c12;
-    opacity: .7;
-}
-.fade-carousel .carousel-indicators > li.active {
-  width: 10px;
-  height: 10px;
-  opacity: 1;
-}
+
+    .fade-carousel .carousel-inner .item {
+        height: 75vh;
+    }
+
+    .fade-carousel .carousel-indicators > li {
+        margin: 0 2px;
+        background-color: #f39c12;
+        border-color: #f39c12;
+        opacity: .7;
+    }
+
+        .fade-carousel .carousel-indicators > li.active {
+            width: 10px;
+            height: 10px;
+            opacity: 1;
+        }
 
 /********************************/
 /*          Hero Headers        */
@@ -150,34 +170,36 @@ Image credits: unsplash.com
     text-align: center;
     text-transform: uppercase;
     text-shadow: 1px 1px 0 rgba(0,0,0,.75);
-      -webkit-transform: translate3d(-50%,-50%,0);
-         -moz-transform: translate3d(-50%,-50%,0);
-          -ms-transform: translate3d(-50%,-50%,0);
-           -o-transform: translate3d(-50%,-50%,0);
-              transform: translate3d(-50%,-50%,0);
+    -webkit-transform: translate3d(-50%,-50%,0);
+    -moz-transform: translate3d(-50%,-50%,0);
+    -ms-transform: translate3d(-50%,-50%,0);
+    -o-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
 }
-.hero h1 {
-    font-size: 4em;    
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-}
+
+    .hero h1 {
+        font-size: 4em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
 
 .fade-carousel .carousel-inner .item .hero {
     opacity: 0;
     -webkit-transition: 2s all ease-in-out .1s;
-       -moz-transition: 2s all ease-in-out .1s; 
-        -ms-transition: 2s all ease-in-out .1s; 
-         -o-transition: 2s all ease-in-out .1s; 
-            transition: 2s all ease-in-out .1s; 
+    -moz-transition: 2s all ease-in-out .1s;
+    -ms-transition: 2s all ease-in-out .1s;
+    -o-transition: 2s all ease-in-out .1s;
+    transition: 2s all ease-in-out .1s;
 }
+
 .fade-carousel .carousel-inner .item.active .hero {
     opacity: 1;
     -webkit-transition: 2s all ease-in-out .1s;
-       -moz-transition: 2s all ease-in-out .1s; 
-        -ms-transition: 2s all ease-in-out .1s; 
-         -o-transition: 2s all ease-in-out .1s; 
-            transition: 2s all ease-in-out .1s;    
+    -moz-transition: 2s all ease-in-out .1s;
+    -ms-transition: 2s all ease-in-out .1s;
+    -o-transition: 2s all ease-in-out .1s;
+    transition: 2s all ease-in-out .1s;
 }
 
 /********************************/
@@ -195,7 +217,10 @@ Image credits: unsplash.com
 /********************************/
 /*          Custom Buttons      */
 /********************************/
-.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-lg {
+    padding: 10px 40px;
+}
+
 .btn.btn-hero,
 .btn.btn-hero:hover,
 .btn.btn-hero:focus {
@@ -209,37 +234,107 @@ Image credits: unsplash.com
 /********************************/
 /*       Slides backgrounds     */
 /********************************/
-.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-1,
 .fade-carousel .slides .slide-2,
 .fade-carousel .slides .slide-3 {
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
+
 .fade-carousel .slides .slide-1 {
-  background-image: url(https://unsplash.it/1200/500?random); 
+    background-image: url(https://unsplash.it/1200/500?random);
 }
+
 .fade-carousel .slides .slide-2 {
-  background-image: url(https://unsplash.it/1199/500?random);
+    background-image: url(https://unsplash.it/1199/500?random);
 }
+
 .fade-carousel .slides .slide-3 {
-  background-image: url(https://unsplash.it/1200/499?random);
+    background-image: url(https://unsplash.it/1200/499?random);
 }
 
 /********************************/
 /*          Media Queries       */
 /********************************/
-@media screen and (min-width: 992px){
-    .hero { width: 980px; }    
+@media screen and (min-width: 992px) {
+    .hero {
+        width: 980px;
+    }
 }
+
 @media screen and (max-width: 768px) {
     .hero h1 {
         font-size: 1.5em;
     }
-    .hero h3{
+
+    .hero h3 {
         font-size: .75em;
     }
-}     
+}
 
 /* End Carousel CSS */
+
+.raffleSection {
+    border-left: 2px solid #00a8d1;
+    border-bottom: 2px solid #00a8d1;
+    padding-left: 15px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+}
+
+    .raffleSection .raffleStaticLabel {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #1abc9c;
+        font-size: large;
+    }
+
+    .raffleSection .raffleDynamicLabel {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: x-large;
+        color: black;
+        padding-bottom: 15px;
+    }
+
+    .raffleSection:hover {
+        border-left: 2px solid #00CCFF;
+        border-bottom: 2px solid #00CCFF;
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+    }
+
+
+
+.page {
+    background-color: white;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.charity-panel-body {
+    border-radius: 5px;
+    background-color: #d9d9d9;
+    box-shadow: 3px 3px 3px 3px;
+}
+
+.NameLabel {
+    /*font-weight: bold;
+    font-size: 500%;*/
+    font-size: 63px;
+}
+
+.DescLabel {
+
+    font-style: italic;
+    color: rgba(0,0,0,.75);
+    font-size: large;
+
+}

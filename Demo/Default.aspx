@@ -3,7 +3,7 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
 
-    <div class="col-xs-12 page">
+    <div class="col-xs-12">
 
         <div class="row">
 
