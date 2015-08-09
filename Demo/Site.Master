@@ -56,10 +56,9 @@
                     <ul class="nav navbar-nav navbarElement">
                         <li><a runat="server" href="Default.aspx" class="active">Home</a></li>
                         <li><a runat="server" href="~/FindCharity">Find a Charity</a></li>
-
-<%--                        <li><a runat="server" href="~/Roshin">Roshin</a></li>--%>
-
+                        <li><a runat="server" href="~/SuggestCharity">Suggest a Charity</a></li>
                     </ul>
+
 
                     <!-- Start Pat Code -->
 

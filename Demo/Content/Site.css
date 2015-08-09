@@ -360,3 +360,8 @@ Image credits: unsplash.com
         -o-transform: scale(1.05);
         -ms-transform: scale(1.05);
     }
+
+    body {
+        padding-top:20px;
+
+    }
