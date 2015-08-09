@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BattleHackDB" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=gfv92zyrqv.database.windows.net;Initial Catalog=BattleHackDB;Persist Security Info=True;User ID=CocUser" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AzureServer" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Raffle" Member="Raffles">
-    <Type Name="Raffle">
-      <Column Name="RaffleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CharityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TicketsEntered" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="UsersEntered" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ObjectiveDollars" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Association Name="Charity_Raffle" Member="Charity" ThisKey="CharityID" OtherKey="CharityID" Type="Charity" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Charity" Member="Charities">
     <Type Name="Charity">
       <Column Name="CharityID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -19,6 +9,20 @@
       <Column Name="Logo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="Tags" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="Charity_Raffle" Member="Raffles" ThisKey="CharityID" OtherKey="CharityID" Type="Raffle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Raffle" Member="Raffles">
+    <Type Name="Raffle">
+      <Column Name="RaffleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CharityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TicketsEntered" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsersEntered" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ObjectiveDollars" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RaisedDollars" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Charity_Raffle" Member="Charity" ThisKey="CharityID" OtherKey="CharityID" Type="Charity" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

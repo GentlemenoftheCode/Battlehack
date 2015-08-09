@@ -30,12 +30,12 @@ namespace Demo
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertRaffle(Raffle instance);
-    partial void UpdateRaffle(Raffle instance);
-    partial void DeleteRaffle(Raffle instance);
     partial void InsertCharity(Charity instance);
     partial void UpdateCharity(Charity instance);
     partial void DeleteCharity(Charity instance);
+    partial void InsertRaffle(Raffle instance);
+    partial void UpdateRaffle(Raffle instance);
+    partial void DeleteRaffle(Raffle instance);
     #endregion
 		
 		public dbDataContext() : 
@@ -68,14 +68,6 @@ namespace Demo
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Raffle> Raffles
-		{
-			get
-			{
-				return this.GetTable<Raffle>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Charity> Charities
 		{
 			get
@@ -83,203 +75,12 @@ namespace Demo
 				return this.GetTable<Charity>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Raffle")]
-	public partial class Raffle : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _RaffleID;
-		
-		private int _CharityID;
-		
-		private System.Nullable<int> _TicketsEntered;
-		
-		private System.Nullable<int> _UsersEntered;
-		
-		private System.Nullable<decimal> _ObjectiveDollars;
-		
-		private EntityRef<Charity> _Charity;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnRaffleIDChanging(int value);
-    partial void OnRaffleIDChanged();
-    partial void OnCharityIDChanging(int value);
-    partial void OnCharityIDChanged();
-    partial void OnTicketsEnteredChanging(System.Nullable<int> value);
-    partial void OnTicketsEnteredChanged();
-    partial void OnUsersEnteredChanging(System.Nullable<int> value);
-    partial void OnUsersEnteredChanged();
-    partial void OnObjectiveDollarsChanging(System.Nullable<decimal> value);
-    partial void OnObjectiveDollarsChanged();
-    #endregion
-		
-		public Raffle()
-		{
-			this._Charity = default(EntityRef<Charity>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RaffleID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int RaffleID
+		public System.Data.Linq.Table<Raffle> Raffles
 		{
 			get
 			{
-				return this._RaffleID;
-			}
-			set
-			{
-				if ((this._RaffleID != value))
-				{
-					this.OnRaffleIDChanging(value);
-					this.SendPropertyChanging();
-					this._RaffleID = value;
-					this.SendPropertyChanged("RaffleID");
-					this.OnRaffleIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CharityID", DbType="Int NOT NULL")]
-		public int CharityID
-		{
-			get
-			{
-				return this._CharityID;
-			}
-			set
-			{
-				if ((this._CharityID != value))
-				{
-					if (this._Charity.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnCharityIDChanging(value);
-					this.SendPropertyChanging();
-					this._CharityID = value;
-					this.SendPropertyChanged("CharityID");
-					this.OnCharityIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketsEntered", DbType="Int")]
-		public System.Nullable<int> TicketsEntered
-		{
-			get
-			{
-				return this._TicketsEntered;
-			}
-			set
-			{
-				if ((this._TicketsEntered != value))
-				{
-					this.OnTicketsEnteredChanging(value);
-					this.SendPropertyChanging();
-					this._TicketsEntered = value;
-					this.SendPropertyChanged("TicketsEntered");
-					this.OnTicketsEnteredChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UsersEntered", DbType="Int")]
-		public System.Nullable<int> UsersEntered
-		{
-			get
-			{
-				return this._UsersEntered;
-			}
-			set
-			{
-				if ((this._UsersEntered != value))
-				{
-					this.OnUsersEnteredChanging(value);
-					this.SendPropertyChanging();
-					this._UsersEntered = value;
-					this.SendPropertyChanged("UsersEntered");
-					this.OnUsersEnteredChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ObjectiveDollars", DbType="Money")]
-		public System.Nullable<decimal> ObjectiveDollars
-		{
-			get
-			{
-				return this._ObjectiveDollars;
-			}
-			set
-			{
-				if ((this._ObjectiveDollars != value))
-				{
-					this.OnObjectiveDollarsChanging(value);
-					this.SendPropertyChanging();
-					this._ObjectiveDollars = value;
-					this.SendPropertyChanged("ObjectiveDollars");
-					this.OnObjectiveDollarsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Charity_Raffle", Storage="_Charity", ThisKey="CharityID", OtherKey="CharityID", IsForeignKey=true)]
-		public Charity Charity
-		{
-			get
-			{
-				return this._Charity.Entity;
-			}
-			set
-			{
-				Charity previousValue = this._Charity.Entity;
-				if (((previousValue != value) 
-							|| (this._Charity.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Charity.Entity = null;
-						previousValue.Raffles.Remove(this);
-					}
-					this._Charity.Entity = value;
-					if ((value != null))
-					{
-						value.Raffles.Add(this);
-						this._CharityID = value.CharityID;
-					}
-					else
-					{
-						this._CharityID = default(int);
-					}
-					this.SendPropertyChanged("Charity");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<Raffle>();
 			}
 		}
 	}
@@ -491,6 +292,301 @@ namespace Demo
 		{
 			this.SendPropertyChanging();
 			entity.Charity = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Raffle")]
+	public partial class Raffle : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _RaffleID;
+		
+		private int _CharityID;
+		
+		private System.Nullable<int> _TicketsEntered;
+		
+		private System.Nullable<int> _UsersEntered;
+		
+		private System.Nullable<decimal> _ObjectiveDollars;
+		
+		private System.Nullable<decimal> _RaisedDollars;
+		
+		private System.Nullable<System.DateTime> _EndTime;
+		
+		private System.Nullable<System.DateTime> _StartTime;
+		
+		private string _Title;
+		
+		private EntityRef<Charity> _Charity;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnRaffleIDChanging(int value);
+    partial void OnRaffleIDChanged();
+    partial void OnCharityIDChanging(int value);
+    partial void OnCharityIDChanged();
+    partial void OnTicketsEnteredChanging(System.Nullable<int> value);
+    partial void OnTicketsEnteredChanged();
+    partial void OnUsersEnteredChanging(System.Nullable<int> value);
+    partial void OnUsersEnteredChanged();
+    partial void OnObjectiveDollarsChanging(System.Nullable<decimal> value);
+    partial void OnObjectiveDollarsChanged();
+    partial void OnRaisedDollarsChanging(System.Nullable<decimal> value);
+    partial void OnRaisedDollarsChanged();
+    partial void OnEndTimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnEndTimeChanged();
+    partial void OnStartTimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnStartTimeChanged();
+    partial void OnTitleChanging(string value);
+    partial void OnTitleChanged();
+    #endregion
+		
+		public Raffle()
+		{
+			this._Charity = default(EntityRef<Charity>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RaffleID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int RaffleID
+		{
+			get
+			{
+				return this._RaffleID;
+			}
+			set
+			{
+				if ((this._RaffleID != value))
+				{
+					this.OnRaffleIDChanging(value);
+					this.SendPropertyChanging();
+					this._RaffleID = value;
+					this.SendPropertyChanged("RaffleID");
+					this.OnRaffleIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CharityID", DbType="Int NOT NULL")]
+		public int CharityID
+		{
+			get
+			{
+				return this._CharityID;
+			}
+			set
+			{
+				if ((this._CharityID != value))
+				{
+					if (this._Charity.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCharityIDChanging(value);
+					this.SendPropertyChanging();
+					this._CharityID = value;
+					this.SendPropertyChanged("CharityID");
+					this.OnCharityIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketsEntered", DbType="Int")]
+		public System.Nullable<int> TicketsEntered
+		{
+			get
+			{
+				return this._TicketsEntered;
+			}
+			set
+			{
+				if ((this._TicketsEntered != value))
+				{
+					this.OnTicketsEnteredChanging(value);
+					this.SendPropertyChanging();
+					this._TicketsEntered = value;
+					this.SendPropertyChanged("TicketsEntered");
+					this.OnTicketsEnteredChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UsersEntered", DbType="Int")]
+		public System.Nullable<int> UsersEntered
+		{
+			get
+			{
+				return this._UsersEntered;
+			}
+			set
+			{
+				if ((this._UsersEntered != value))
+				{
+					this.OnUsersEnteredChanging(value);
+					this.SendPropertyChanging();
+					this._UsersEntered = value;
+					this.SendPropertyChanged("UsersEntered");
+					this.OnUsersEnteredChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ObjectiveDollars", DbType="Money")]
+		public System.Nullable<decimal> ObjectiveDollars
+		{
+			get
+			{
+				return this._ObjectiveDollars;
+			}
+			set
+			{
+				if ((this._ObjectiveDollars != value))
+				{
+					this.OnObjectiveDollarsChanging(value);
+					this.SendPropertyChanging();
+					this._ObjectiveDollars = value;
+					this.SendPropertyChanged("ObjectiveDollars");
+					this.OnObjectiveDollarsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RaisedDollars", DbType="Money")]
+		public System.Nullable<decimal> RaisedDollars
+		{
+			get
+			{
+				return this._RaisedDollars;
+			}
+			set
+			{
+				if ((this._RaisedDollars != value))
+				{
+					this.OnRaisedDollarsChanging(value);
+					this.SendPropertyChanging();
+					this._RaisedDollars = value;
+					this.SendPropertyChanged("RaisedDollars");
+					this.OnRaisedDollarsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndTime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> EndTime
+		{
+			get
+			{
+				return this._EndTime;
+			}
+			set
+			{
+				if ((this._EndTime != value))
+				{
+					this.OnEndTimeChanging(value);
+					this.SendPropertyChanging();
+					this._EndTime = value;
+					this.SendPropertyChanged("EndTime");
+					this.OnEndTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartTime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> StartTime
+		{
+			get
+			{
+				return this._StartTime;
+			}
+			set
+			{
+				if ((this._StartTime != value))
+				{
+					this.OnStartTimeChanging(value);
+					this.SendPropertyChanging();
+					this._StartTime = value;
+					this.SendPropertyChanged("StartTime");
+					this.OnStartTimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(50)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this.OnTitleChanging(value);
+					this.SendPropertyChanging();
+					this._Title = value;
+					this.SendPropertyChanged("Title");
+					this.OnTitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Charity_Raffle", Storage="_Charity", ThisKey="CharityID", OtherKey="CharityID", IsForeignKey=true)]
+		public Charity Charity
+		{
+			get
+			{
+				return this._Charity.Entity;
+			}
+			set
+			{
+				Charity previousValue = this._Charity.Entity;
+				if (((previousValue != value) 
+							|| (this._Charity.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Charity.Entity = null;
+						previousValue.Raffles.Remove(this);
+					}
+					this._Charity.Entity = value;
+					if ((value != null))
+					{
+						value.Raffles.Add(this);
+						this._CharityID = value.CharityID;
+					}
+					else
+					{
+						this._CharityID = default(int);
+					}
+					this.SendPropertyChanged("Charity");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }
