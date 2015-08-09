@@ -39,6 +39,7 @@ namespace Demo
                 var id = result.Transaction.Id;
                 var amount = result.Transaction.Amount;
                 var date = result.Transaction.UpdatedAt;
+                var status = result.Transaction.ProcessorResponseCode;
             }
         }
 
