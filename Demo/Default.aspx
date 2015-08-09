@@ -5,8 +5,14 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
 
     <div class="col-xs-12 page">
+
         <div class="row">
-            <div class="carousel slide" id="myCarousel">
+            <div class="jumbotron" style="text-align: center">
+                <h3>Join a Charity Raffle Online</h3>
+                <h5>Join a raffle, get a chance to win cash money while helping a charity.</h5>
+                <asp:Button ID="getStartedButton" runat="server" CssClass="btn btn-primary" Text="Get Started!" PostBackUrl="~/FindCharity.aspx" />
+
+                <div class="carousel slide" id="myCarousel">
 
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -19,7 +25,7 @@
                     <div class="carousel-inner">
                         <div class="item active" id="slide1">
                             <div class="carousel-caption">
-                                <img src="/images/carousel_large.jpg" alt="Large carousel image" />
+                                <img src="http://placehold.it/1200x500" alt="Large carousel image">
                                 <h4>Purchase Tickets to Raffles!</h4>
                                 <p>Don't worry, all proceeds besides the prize get donated to the host-charity</p>
                             </div>
@@ -29,7 +35,7 @@
 
                         <div class="item" id="slide2">
                             <div class="carousel-caption">
-                                <img src="/images/carousel_large.jpg" alt="Large carousel image" />
+                                <img src="http://placehold.it/1200x500" alt="Large carousel image">
                                 <h4>Check Out Other Charities!</h4>
                                 <p>Our site allows you to connect with the non-profits that help those who need it most</p>
                             </div>
@@ -39,7 +45,7 @@
 
                         <div class="item" id="slide3">
                             <div class="carousel-caption">
-                                <img src="/images/carousel_large.jpg" alt="Large carousel image" />
+                                <img src="http://placehold.it/1200x500" alt="Large carousel image">
                                 <h4>Sign Your Charity Up!</h4>
                                 <p>We're always looking for non-profits that can benefit from our raffles</p>
                             </div>
@@ -55,13 +61,6 @@
 
                 </div>
                 <!-- end myCarousel -->
-            <div class="jumbotron" style="text-align: center">
-
-                <h3>Join a Charity Raffle Online</h3>
-
-                <h5>Join a raffle, get a chance to win cash money while helping a charity.</h5>
-
-                <asp:Button ID="getStartedButton" runat="server" CssClass="btn btn-primary" Text="Get Started!" PostBackUrl="~/FindCharity.aspx" />
 
             </div>
     </div>
